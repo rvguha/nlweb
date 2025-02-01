@@ -1,0 +1,2750 @@
+<?xml version="1.0" encoding="UTF-8"?><sitemapindex
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948484-en_US-hotel_review-1723541629.xml.gz</loc>
+  <lastmod>2024-08-13T09:33:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954096-en_US-hotel_review-1724663925.xml.gz</loc>
+  <lastmod>2024-08-26T09:18:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954097-en_US-hotel_review-1724663929.xml.gz</loc>
+  <lastmod>2024-08-26T09:18:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964738-en_US-hotel_review-1727655982.xml.gz</loc>
+  <lastmod>2024-09-30T00:26:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964741-en_US-hotel_review-1727655996.xml.gz</loc>
+  <lastmod>2024-09-30T00:26:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969265-en_US-hotel_review-1728871925.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969266-en_US-hotel_review-1728871929.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969267-en_US-hotel_review-1728871933.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969268-en_US-hotel_review-1728871938.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969269-en_US-hotel_review-1728871942.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969270-en_US-hotel_review-1728871946.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969271-en_US-hotel_review-1728871950.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969272-en_US-hotel_review-1728871954.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:34Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969273-en_US-hotel_review-1728871958.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969274-en_US-hotel_review-1728871961.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969275-en_US-hotel_review-1728871965.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969276-en_US-hotel_review-1728871969.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969277-en_US-hotel_review-1728871974.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969278-en_US-hotel_review-1728871977.xml.gz</loc>
+  <lastmod>2024-10-14T02:12:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969279-en_US-hotel_review-1728871982.xml.gz</loc>
+  <lastmod>2024-10-14T02:13:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969280-en_US-hotel_review-1728871986.xml.gz</loc>
+  <lastmod>2024-10-14T02:13:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969281-en_US-hotel_review-1728871991.xml.gz</loc>
+  <lastmod>2024-10-14T02:13:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969282-en_US-hotel_review-1728871995.xml.gz</loc>
+  <lastmod>2024-10-14T02:13:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969283-en_US-hotel_review-1729791560.xml.gz</loc>
+  <lastmod>2024-10-24T17:39:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973543-en_US-hotel_review-1729791564.xml.gz</loc>
+  <lastmod>2024-10-24T17:39:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973544-en_US-hotel_review-1729791569.xml.gz</loc>
+  <lastmod>2024-10-24T17:39:29Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973545-en_US-hotel_review-1729791573.xml.gz</loc>
+  <lastmod>2024-10-24T17:39:33Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973546-en_US-hotel_review-1729791577.xml.gz</loc>
+  <lastmod>2024-10-24T17:39:37Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973547-en_US-hotel_review-1729791582.xml.gz</loc>
+  <lastmod>2024-10-24T17:39:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973548-en_US-hotel_review-1730031675.xml.gz</loc>
+  <lastmod>2024-10-27T12:21:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976630-en_US-hotel_review-1731617182.xml.gz</loc>
+  <lastmod>2024-11-14T20:46:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979826-en_US-hotel_review-1731617191.xml.gz</loc>
+  <lastmod>2024-11-14T20:46:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979827-en_US-hotel_review-1731617199.xml.gz</loc>
+  <lastmod>2024-11-14T20:46:39Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979828-en_US-hotel_review-1732261917.xml.gz</loc>
+  <lastmod>2024-11-22T07:51:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981168-en_US-hotel_review-1732261919.xml.gz</loc>
+  <lastmod>2024-11-22T07:51:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981169-en_US-hotel_review-1732261923.xml.gz</loc>
+  <lastmod>2024-11-22T07:52:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981170-en_US-hotel_review-1732261927.xml.gz</loc>
+  <lastmod>2024-11-22T07:52:07Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981171-en_US-hotel_review-1732768506.xml.gz</loc>
+  <lastmod>2024-11-28T04:35:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981989-en_US-hotel_review-1732768508.xml.gz</loc>
+  <lastmod>2024-11-28T04:35:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981990-en_US-hotel_review-1732768514.xml.gz</loc>
+  <lastmod>2024-11-28T04:35:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981991-en_US-hotel_review-1733250632.xml.gz</loc>
+  <lastmod>2024-12-03T18:30:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984046-en_US-hotel_review-1733586355.xml.gz</loc>
+  <lastmod>2024-12-07T15:45:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964747-en_US-restaurant_review-1727656530.xml.gz</loc>
+  <lastmod>2024-09-30T00:35:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969284-en_US-restaurant_review-1728872505.xml.gz</loc>
+  <lastmod>2024-10-14T02:21:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969285-en_US-restaurant_review-1728872509.xml.gz</loc>
+  <lastmod>2024-10-14T02:21:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969286-en_US-restaurant_review-1728872514.xml.gz</loc>
+  <lastmod>2024-10-14T02:21:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969287-en_US-restaurant_review-1728872519.xml.gz</loc>
+  <lastmod>2024-10-14T02:21:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969288-en_US-restaurant_review-1729792021.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973549-en_US-restaurant_review-1729792023.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973550-en_US-restaurant_review-1729792027.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:07Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973551-en_US-restaurant_review-1729792031.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973552-en_US-restaurant_review-1729792035.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973553-en_US-restaurant_review-1729792039.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:19Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973554-en_US-restaurant_review-1729792043.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:23Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973555-en_US-restaurant_review-1729792047.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973556-en_US-restaurant_review-1729792051.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973557-en_US-restaurant_review-1729792056.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973558-en_US-restaurant_review-1729792060.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973559-en_US-restaurant_review-1729792065.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973560-en_US-restaurant_review-1729792069.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973561-en_US-restaurant_review-1729792073.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973562-en_US-restaurant_review-1729792078.xml.gz</loc>
+  <lastmod>2024-10-24T17:47:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973563-en_US-restaurant_review-1729792082.xml.gz</loc>
+  <lastmod>2024-10-24T17:48:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973564-en_US-restaurant_review-1730031792.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974509-en_US-restaurant_review-1730031795.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974510-en_US-restaurant_review-1730031798.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974511-en_US-restaurant_review-1730031802.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974512-en_US-restaurant_review-1730031805.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974513-en_US-restaurant_review-1730031808.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974514-en_US-restaurant_review-1730031812.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974515-en_US-restaurant_review-1730031816.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974516-en_US-restaurant_review-1730031820.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974517-en_US-restaurant_review-1730031824.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974518-en_US-restaurant_review-1730031827.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:47Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974519-en_US-restaurant_review-1730031831.xml.gz</loc>
+  <lastmod>2024-10-27T12:23:51Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974520-en_US-restaurant_review-1730780558.xml.gz</loc>
+  <lastmod>2024-11-05T04:22:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976631-en_US-restaurant_review-1730780561.xml.gz</loc>
+  <lastmod>2024-11-05T04:22:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976632-en_US-restaurant_review-1730780565.xml.gz</loc>
+  <lastmod>2024-11-05T04:22:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976633-en_US-restaurant_review-1730780569.xml.gz</loc>
+  <lastmod>2024-11-05T04:22:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976634-en_US-restaurant_review-1730780574.xml.gz</loc>
+  <lastmod>2024-11-05T04:22:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976635-en_US-restaurant_review-1730780578.xml.gz</loc>
+  <lastmod>2024-11-05T04:22:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976636-en_US-restaurant_review-1730780584.xml.gz</loc>
+  <lastmod>2024-11-05T04:23:04Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976637-en_US-restaurant_review-1730780588.xml.gz</loc>
+  <lastmod>2024-11-05T04:23:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976638-en_US-restaurant_review-1730780593.xml.gz</loc>
+  <lastmod>2024-11-05T04:23:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976639-en_US-restaurant_review-1730780598.xml.gz</loc>
+  <lastmod>2024-11-05T04:23:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976640-en_US-restaurant_review-1730780603.xml.gz</loc>
+  <lastmod>2024-11-05T04:23:23Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976641-en_US-restaurant_review-1730780608.xml.gz</loc>
+  <lastmod>2024-11-05T04:23:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976642-en_US-restaurant_review-1731617665.xml.gz</loc>
+  <lastmod>2024-11-14T20:54:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979829-en_US-restaurant_review-1731617667.xml.gz</loc>
+  <lastmod>2024-11-14T20:54:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979830-en_US-restaurant_review-1731617671.xml.gz</loc>
+  <lastmod>2024-11-14T20:54:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979831-en_US-restaurant_review-1731617676.xml.gz</loc>
+  <lastmod>2024-11-14T20:54:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979832-en_US-restaurant_review-1731617680.xml.gz</loc>
+  <lastmod>2024-11-14T20:54:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979833-en_US-restaurant_review-1731617685.xml.gz</loc>
+  <lastmod>2024-11-14T20:54:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979834-en_US-restaurant_review-1731617690.xml.gz</loc>
+  <lastmod>2024-11-14T20:54:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979835-en_US-restaurant_review-1731617695.xml.gz</loc>
+  <lastmod>2024-11-14T20:54:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979836-en_US-restaurant_review-1731617701.xml.gz</loc>
+  <lastmod>2024-11-14T20:55:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979837-en_US-restaurant_review-1731617705.xml.gz</loc>
+  <lastmod>2024-11-14T20:55:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979838-en_US-restaurant_review-1731617711.xml.gz</loc>
+  <lastmod>2024-11-14T20:55:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979839-en_US-restaurant_review-1732262242.xml.gz</loc>
+  <lastmod>2024-11-22T07:57:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981172-en_US-restaurant_review-1732769623.xml.gz</loc>
+  <lastmod>2024-11-28T04:53:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981992-en_US-restaurant_review-1732769657.xml.gz</loc>
+  <lastmod>2024-11-28T04:54:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981993-en_US-restaurant_review-1732769676.xml.gz</loc>
+  <lastmod>2024-11-28T04:54:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981994-en_US-restaurant_review-1732769685.xml.gz</loc>
+  <lastmod>2024-11-28T04:54:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981995-en_US-restaurant_review-1732769692.xml.gz</loc>
+  <lastmod>2024-11-28T04:54:52Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981996-en_US-restaurant_review-1733251090.xml.gz</loc>
+  <lastmod>2024-12-03T18:38:10Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984047-en_US-restaurant_review-1733251094.xml.gz</loc>
+  <lastmod>2024-12-03T18:38:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984048-en_US-restaurant_review-1733251099.xml.gz</loc>
+  <lastmod>2024-12-03T18:38:19Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984049-en_US-restaurant_review-1733586365.xml.gz</loc>
+  <lastmod>2024-12-07T15:46:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1562938-en_US-tourism-1606810932.xml.gz</loc>
+  <lastmod>2020-12-01T08:22:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1591096-en_US-tourism-1686851084.xml.gz</loc>
+  <lastmod>2023-06-15T17:44:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806610-en_US-tourism-1690103665.xml.gz</loc>
+  <lastmod>2023-07-23T09:14:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1825813-en_US-tourism-1725789844.xml.gz</loc>
+  <lastmod>2024-09-08T10:04:04Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960159-en_US-tourism-1733586480.xml.gz</loc>
+  <lastmod>2024-12-07T15:48:00Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1933151-en_US-hotels-1719155026.xml.gz</loc>
+  <lastmod>2024-06-23T15:03:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1933152-en_US-hotels-1719155030.xml.gz</loc>
+  <lastmod>2024-06-23T15:03:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1933154-en_US-hotels-1719155037.xml.gz</loc>
+  <lastmod>2024-06-23T15:03:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939786-en_US-hotels-1721343255.xml.gz</loc>
+  <lastmod>2024-07-18T22:54:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939787-en_US-hotels-1721343259.xml.gz</loc>
+  <lastmod>2024-07-18T22:54:19Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1943659-en_US-hotels-1723542166.xml.gz</loc>
+  <lastmod>2024-08-13T09:42:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948530-en_US-hotels-1723542167.xml.gz</loc>
+  <lastmod>2024-08-13T09:42:47Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948531-en_US-hotels-1723542172.xml.gz</loc>
+  <lastmod>2024-08-13T09:42:52Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948532-en_US-hotels-1724664938.xml.gz</loc>
+  <lastmod>2024-08-26T09:35:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954105-en_US-hotels-1724664943.xml.gz</loc>
+  <lastmod>2024-08-26T09:35:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954106-en_US-hotels-1724664947.xml.gz</loc>
+  <lastmod>2024-08-26T09:35:47Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954107-en_US-hotels-1725789897.xml.gz</loc>
+  <lastmod>2024-09-08T10:04:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960160-en_US-hotels-1726479396.xml.gz</loc>
+  <lastmod>2024-09-16T09:36:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961616-en_US-hotels-1727656670.xml.gz</loc>
+  <lastmod>2024-09-30T00:37:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964751-en_US-hotels-1729792450.xml.gz</loc>
+  <lastmod>2024-10-24T17:54:10Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973565-en_US-hotels-1730780773.xml.gz</loc>
+  <lastmod>2024-11-05T04:26:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976643-en_US-hotels-1731617851.xml.gz</loc>
+  <lastmod>2024-11-14T20:57:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979840-en_US-hotels-1733251257.xml.gz</loc>
+  <lastmod>2024-12-03T18:40:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984050-en_US-hotels-1733251260.xml.gz</loc>
+  <lastmod>2024-12-03T18:41:00Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984051-en_US-hotels-1733251264.xml.gz</loc>
+  <lastmod>2024-12-03T18:41:04Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984052-en_US-hotels-1733251268.xml.gz</loc>
+  <lastmod>2024-12-03T18:41:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-932688-en_US-last_minute-1732262289.xml.gz</loc>
+  <lastmod>2024-11-22T07:58:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1438189-en_US-hotels_list-1595369322.xml.gz</loc>
+  <lastmod>2020-07-21T22:08:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1539327-en_US-hotels_list-1596828568.xml.gz</loc>
+  <lastmod>2020-08-07T19:29:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1546272-en_US-hotels_list-1681045241.xml.gz</loc>
+  <lastmod>2023-04-09T13:00:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1795654-en_US-hotels_list-1681045247.xml.gz</loc>
+  <lastmod>2023-04-09T13:00:47Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1795655-en_US-hotels_list-1686851315.xml.gz</loc>
+  <lastmod>2023-06-15T17:48:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806629-en_US-hotels_list-1686851317.xml.gz</loc>
+  <lastmod>2023-06-15T17:48:37Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806630-en_US-hotels_list-1686851321.xml.gz</loc>
+  <lastmod>2023-06-15T17:48:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806631-en_US-hotels_list-1686851325.xml.gz</loc>
+  <lastmod>2023-06-15T17:48:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806632-en_US-hotels_list-1715096585.xml.gz</loc>
+  <lastmod>2024-05-07T15:43:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1913573-en_US-hotels_list-1715096593.xml.gz</loc>
+  <lastmod>2024-05-07T15:43:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1913574-en_US-hotels_list-1732262346.xml.gz</loc>
+  <lastmod>2024-11-22T07:59:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876041-en_US-hotels_near-1705505938.xml.gz</loc>
+  <lastmod>2024-01-17T15:38:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876042-en_US-hotels_near-1705505941.xml.gz</loc>
+  <lastmod>2024-01-17T15:39:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876043-en_US-hotels_near-1705505945.xml.gz</loc>
+  <lastmod>2024-01-17T15:39:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948546-en_US-hotels_near-1723542535.xml.gz</loc>
+  <lastmod>2024-08-13T09:48:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948553-en_US-hotels_near-1723542557.xml.gz</loc>
+  <lastmod>2024-08-13T09:49:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948554-en_US-hotels_near-1723542561.xml.gz</loc>
+  <lastmod>2024-08-13T09:49:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948555-en_US-hotels_near-1723542564.xml.gz</loc>
+  <lastmod>2024-08-13T09:49:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948556-en_US-hotels_near-1723542567.xml.gz</loc>
+  <lastmod>2024-08-13T09:49:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954115-en_US-hotels_near-1724665570.xml.gz</loc>
+  <lastmod>2024-08-26T09:46:10Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954121-en_US-hotels_near-1724665598.xml.gz</loc>
+  <lastmod>2024-08-26T09:46:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954123-en_US-hotels_near-1724665607.xml.gz</loc>
+  <lastmod>2024-08-26T09:46:47Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954125-en_US-hotels_near-1724665616.xml.gz</loc>
+  <lastmod>2024-08-26T09:46:56Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954126-en_US-hotels_near-1724665621.xml.gz</loc>
+  <lastmod>2024-08-26T09:47:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954127-en_US-hotels_near-1724665626.xml.gz</loc>
+  <lastmod>2024-08-26T09:47:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1956693-en_US-hotels_near-1725212365.xml.gz</loc>
+  <lastmod>2024-09-01T17:39:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960162-en_US-hotels_near-1725790431.xml.gz</loc>
+  <lastmod>2024-09-08T10:13:51Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960164-en_US-hotels_near-1726479972.xml.gz</loc>
+  <lastmod>2024-09-16T09:46:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961619-en_US-hotels_near-1726479984.xml.gz</loc>
+  <lastmod>2024-09-16T09:46:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961620-en_US-hotels_near-1726479988.xml.gz</loc>
+  <lastmod>2024-09-16T09:46:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961621-en_US-hotels_near-1726479992.xml.gz</loc>
+  <lastmod>2024-09-16T09:46:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961623-en_US-hotels_near-1726480001.xml.gz</loc>
+  <lastmod>2024-09-16T09:46:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961624-en_US-hotels_near-1726480005.xml.gz</loc>
+  <lastmod>2024-09-16T09:46:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961625-en_US-hotels_near-1726480010.xml.gz</loc>
+  <lastmod>2024-09-16T09:46:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961626-en_US-hotels_near-1726480015.xml.gz</loc>
+  <lastmod>2024-09-16T09:46:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961627-en_US-hotels_near-1726480021.xml.gz</loc>
+  <lastmod>2024-09-16T09:47:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961628-en_US-hotels_near-1726480026.xml.gz</loc>
+  <lastmod>2024-09-16T09:47:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961629-en_US-hotels_near-1726480032.xml.gz</loc>
+  <lastmod>2024-09-16T09:47:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961630-en_US-hotels_near-1726480037.xml.gz</loc>
+  <lastmod>2024-09-16T09:47:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961631-en_US-hotels_near-1727657323.xml.gz</loc>
+  <lastmod>2024-09-30T00:48:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964752-en_US-hotels_near-1727657328.xml.gz</loc>
+  <lastmod>2024-09-30T00:48:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964753-en_US-hotels_near-1727657333.xml.gz</loc>
+  <lastmod>2024-09-30T00:48:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964754-en_US-hotels_near-1727657338.xml.gz</loc>
+  <lastmod>2024-09-30T00:48:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964756-en_US-hotels_near-1727657349.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964758-en_US-hotels_near-1727657360.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964759-en_US-hotels_near-1727657365.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964760-en_US-hotels_near-1727657371.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964761-en_US-hotels_near-1727657375.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964762-en_US-hotels_near-1727657380.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964763-en_US-hotels_near-1727657385.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964764-en_US-hotels_near-1727657389.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964765-en_US-hotels_near-1727657394.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964766-en_US-hotels_near-1727657399.xml.gz</loc>
+  <lastmod>2024-09-30T00:49:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964767-en_US-hotels_near-1727657403.xml.gz</loc>
+  <lastmod>2024-09-30T00:50:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964768-en_US-hotels_near-1727657408.xml.gz</loc>
+  <lastmod>2024-09-30T00:50:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964769-en_US-hotels_near-1727657413.xml.gz</loc>
+  <lastmod>2024-09-30T00:50:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969291-en_US-hotels_near-1728873232.xml.gz</loc>
+  <lastmod>2024-10-14T02:33:52Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969292-en_US-hotels_near-1728873237.xml.gz</loc>
+  <lastmod>2024-10-14T02:33:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969293-en_US-hotels_near-1728873241.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969294-en_US-hotels_near-1728873246.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969295-en_US-hotels_near-1728873250.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:10Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969296-en_US-hotels_near-1728873255.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969297-en_US-hotels_near-1728873260.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969298-en_US-hotels_near-1728873265.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969299-en_US-hotels_near-1728873271.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969300-en_US-hotels_near-1728873277.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:37Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969301-en_US-hotels_near-1728873282.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969302-en_US-hotels_near-1728873288.xml.gz</loc>
+  <lastmod>2024-10-14T02:34:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969303-en_US-hotels_near-1729792970.xml.gz</loc>
+  <lastmod>2024-10-24T18:02:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973566-en_US-hotels_near-1729792975.xml.gz</loc>
+  <lastmod>2024-10-24T18:02:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973567-en_US-hotels_near-1729792979.xml.gz</loc>
+  <lastmod>2024-10-24T18:02:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973570-en_US-hotels_near-1729792994.xml.gz</loc>
+  <lastmod>2024-10-24T18:03:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973571-en_US-hotels_near-1729792999.xml.gz</loc>
+  <lastmod>2024-10-24T18:03:19Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973572-en_US-hotels_near-1729793003.xml.gz</loc>
+  <lastmod>2024-10-24T18:03:23Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973573-en_US-hotels_near-1729793008.xml.gz</loc>
+  <lastmod>2024-10-24T18:03:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973574-en_US-hotels_near-1730031991.xml.gz</loc>
+  <lastmod>2024-10-27T12:26:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974521-en_US-hotels_near-1730031996.xml.gz</loc>
+  <lastmod>2024-10-27T12:26:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974522-en_US-hotels_near-1730032000.xml.gz</loc>
+  <lastmod>2024-10-27T12:26:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974523-en_US-hotels_near-1730032005.xml.gz</loc>
+  <lastmod>2024-10-27T12:26:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974525-en_US-hotels_near-1730781370.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:10Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976644-en_US-hotels_near-1730781374.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976645-en_US-hotels_near-1730781379.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:19Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976646-en_US-hotels_near-1730781384.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976647-en_US-hotels_near-1730781391.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976648-en_US-hotels_near-1730781396.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976649-en_US-hotels_near-1730781401.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976650-en_US-hotels_near-1730781406.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976651-en_US-hotels_near-1730781411.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:51Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976652-en_US-hotels_near-1730781416.xml.gz</loc>
+  <lastmod>2024-11-05T04:36:56Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976653-en_US-hotels_near-1731618327.xml.gz</loc>
+  <lastmod>2024-11-14T21:05:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979841-en_US-hotels_near-1731618331.xml.gz</loc>
+  <lastmod>2024-11-14T21:05:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979842-en_US-hotels_near-1731618338.xml.gz</loc>
+  <lastmod>2024-11-14T21:05:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979843-en_US-hotels_near-1731618343.xml.gz</loc>
+  <lastmod>2024-11-14T21:05:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979844-en_US-hotels_near-1731618349.xml.gz</loc>
+  <lastmod>2024-11-14T21:05:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979845-en_US-hotels_near-1731618354.xml.gz</loc>
+  <lastmod>2024-11-14T21:05:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979846-en_US-hotels_near-1731618359.xml.gz</loc>
+  <lastmod>2024-11-14T21:05:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979847-en_US-hotels_near-1732262694.xml.gz</loc>
+  <lastmod>2024-11-22T08:04:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981173-en_US-hotels_near-1732262699.xml.gz</loc>
+  <lastmod>2024-11-22T08:04:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981174-en_US-hotels_near-1732262704.xml.gz</loc>
+  <lastmod>2024-11-22T08:05:04Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981175-en_US-hotels_near-1732262709.xml.gz</loc>
+  <lastmod>2024-11-22T08:05:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981176-en_US-hotels_near-1732262714.xml.gz</loc>
+  <lastmod>2024-11-22T08:05:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981177-en_US-hotels_near-1732770898.xml.gz</loc>
+  <lastmod>2024-11-28T05:14:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981997-en_US-hotels_near-1732770903.xml.gz</loc>
+  <lastmod>2024-11-28T05:15:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981998-en_US-hotels_near-1732770909.xml.gz</loc>
+  <lastmod>2024-11-28T05:15:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1981999-en_US-hotels_near-1732770914.xml.gz</loc>
+  <lastmod>2024-11-28T05:15:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1982000-en_US-hotels_near-1733252589.xml.gz</loc>
+  <lastmod>2024-12-03T19:03:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984053-en_US-hotels_near-1733252620.xml.gz</loc>
+  <lastmod>2024-12-03T19:03:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984054-en_US-hotels_near-1733252628.xml.gz</loc>
+  <lastmod>2024-12-03T19:03:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984055-en_US-hotels_near-1733252635.xml.gz</loc>
+  <lastmod>2024-12-03T19:03:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984056-en_US-hotels_near-1733252641.xml.gz</loc>
+  <lastmod>2024-12-03T19:04:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984057-en_US-hotels_near-1733252648.xml.gz</loc>
+  <lastmod>2024-12-03T19:04:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984058-en_US-hotels_near-1733252659.xml.gz</loc>
+  <lastmod>2024-12-03T19:04:19Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984059-en_US-hotels_near-1733586547.xml.gz</loc>
+  <lastmod>2024-12-07T15:49:07Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969304-en_US-restaurants_near-1728873733.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969305-en_US-restaurants_near-1728873736.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969306-en_US-restaurants_near-1728873740.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969307-en_US-restaurants_near-1728873744.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969308-en_US-restaurants_near-1728873748.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969309-en_US-restaurants_near-1728873752.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969310-en_US-restaurants_near-1728873756.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969311-en_US-restaurants_near-1728873760.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969312-en_US-restaurants_near-1728873763.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969313-en_US-restaurants_near-1728873767.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:47Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969314-en_US-restaurants_near-1728873771.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:51Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969315-en_US-restaurants_near-1728873775.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969316-en_US-restaurants_near-1728873778.xml.gz</loc>
+  <lastmod>2024-10-14T02:42:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969317-en_US-restaurants_near-1728873782.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969318-en_US-restaurants_near-1728873786.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969319-en_US-restaurants_near-1728873790.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:10Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969320-en_US-restaurants_near-1728873795.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969321-en_US-restaurants_near-1728873801.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969322-en_US-restaurants_near-1728873805.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969323-en_US-restaurants_near-1728873809.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:29Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969324-en_US-restaurants_near-1728873814.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:34Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969325-en_US-restaurants_near-1728873819.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:39Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969326-en_US-restaurants_near-1728873825.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969327-en_US-restaurants_near-1728873829.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969328-en_US-restaurants_near-1728873833.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969329-en_US-restaurants_near-1728873837.xml.gz</loc>
+  <lastmod>2024-10-14T02:43:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969331-en_US-restaurants_near-1729793480.xml.gz</loc>
+  <lastmod>2024-10-24T18:11:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973575-en_US-restaurants_near-1729793487.xml.gz</loc>
+  <lastmod>2024-10-24T18:11:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973576-en_US-restaurants_near-1730032190.xml.gz</loc>
+  <lastmod>2024-10-27T12:29:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974526-en_US-restaurants_near-1730032197.xml.gz</loc>
+  <lastmod>2024-10-27T12:29:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974527-en_US-restaurants_near-1730032202.xml.gz</loc>
+  <lastmod>2024-10-27T12:30:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974528-en_US-restaurants_near-1730032205.xml.gz</loc>
+  <lastmod>2024-10-27T12:30:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974529-en_US-restaurants_near-1730032209.xml.gz</loc>
+  <lastmod>2024-10-27T12:30:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974530-en_US-restaurants_near-1730781695.xml.gz</loc>
+  <lastmod>2024-11-05T04:41:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976654-en_US-restaurants_near-1730781703.xml.gz</loc>
+  <lastmod>2024-11-05T04:41:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976655-en_US-restaurants_near-1730781709.xml.gz</loc>
+  <lastmod>2024-11-05T04:41:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976656-en_US-restaurants_near-1733253188.xml.gz</loc>
+  <lastmod>2024-12-03T19:13:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984060-en_US-restaurants_near-1733586558.xml.gz</loc>
+  <lastmod>2024-12-07T15:49:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1943678-en_US-restaurants-1722685215.xml.gz</loc>
+  <lastmod>2024-08-03T11:40:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1943684-en_US-restaurants-1722685240.xml.gz</loc>
+  <lastmod>2024-08-03T11:40:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1943693-en_US-restaurants-1722685278.xml.gz</loc>
+  <lastmod>2024-08-03T11:41:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948572-en_US-restaurants-1723542986.xml.gz</loc>
+  <lastmod>2024-08-13T09:56:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1948573-en_US-restaurants-1723542990.xml.gz</loc>
+  <lastmod>2024-08-13T09:56:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954157-en_US-restaurants-1724666485.xml.gz</loc>
+  <lastmod>2024-08-26T10:01:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954158-en_US-restaurants-1724666490.xml.gz</loc>
+  <lastmod>2024-08-26T10:01:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954159-en_US-restaurants-1724666494.xml.gz</loc>
+  <lastmod>2024-08-26T10:01:34Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954161-en_US-restaurants-1724666504.xml.gz</loc>
+  <lastmod>2024-08-26T10:01:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954163-en_US-restaurants-1724666514.xml.gz</loc>
+  <lastmod>2024-08-26T10:01:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1954164-en_US-restaurants-1725213160.xml.gz</loc>
+  <lastmod>2024-09-01T17:52:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1956699-en_US-restaurants-1725213164.xml.gz</loc>
+  <lastmod>2024-09-01T17:52:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1956700-en_US-restaurants-1725791202.xml.gz</loc>
+  <lastmod>2024-09-08T10:26:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960172-en_US-restaurants-1725791219.xml.gz</loc>
+  <lastmod>2024-09-08T10:26:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961636-en_US-restaurants-1727658086.xml.gz</loc>
+  <lastmod>2024-09-30T01:01:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964773-en_US-restaurants-1727658088.xml.gz</loc>
+  <lastmod>2024-09-30T01:01:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964774-en_US-restaurants-1727658093.xml.gz</loc>
+  <lastmod>2024-09-30T01:01:33Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964775-en_US-restaurants-1727658098.xml.gz</loc>
+  <lastmod>2024-09-30T01:01:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964776-en_US-restaurants-1727658103.xml.gz</loc>
+  <lastmod>2024-09-30T01:01:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964777-en_US-restaurants-1727658107.xml.gz</loc>
+  <lastmod>2024-09-30T01:01:47Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964778-en_US-restaurants-1727658113.xml.gz</loc>
+  <lastmod>2024-09-30T01:01:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964779-en_US-restaurants-1728874363.xml.gz</loc>
+  <lastmod>2024-10-14T02:52:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969332-en_US-restaurants-1728874364.xml.gz</loc>
+  <lastmod>2024-10-14T02:52:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969333-en_US-restaurants-1728874368.xml.gz</loc>
+  <lastmod>2024-10-14T02:52:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969334-en_US-restaurants-1728874373.xml.gz</loc>
+  <lastmod>2024-10-14T02:52:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969335-en_US-restaurants-1728874377.xml.gz</loc>
+  <lastmod>2024-10-14T02:52:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969336-en_US-restaurants-1728874382.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969337-en_US-restaurants-1728874387.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:07Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969338-en_US-restaurants-1728874391.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969339-en_US-restaurants-1728874396.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969340-en_US-restaurants-1728874401.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969341-en_US-restaurants-1728874407.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969342-en_US-restaurants-1728874412.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969343-en_US-restaurants-1728874418.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969344-en_US-restaurants-1728874422.xml.gz</loc>
+  <lastmod>2024-10-14T02:53:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969345-en_US-restaurants-1729793945.xml.gz</loc>
+  <lastmod>2024-10-24T18:19:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973577-en_US-restaurants-1729793947.xml.gz</loc>
+  <lastmod>2024-10-24T18:19:07Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973578-en_US-restaurants-1729793951.xml.gz</loc>
+  <lastmod>2024-10-24T18:19:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973579-en_US-restaurants-1729793956.xml.gz</loc>
+  <lastmod>2024-10-24T18:19:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973580-en_US-restaurants-1729793961.xml.gz</loc>
+  <lastmod>2024-10-24T18:19:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973581-en_US-restaurants-1729793965.xml.gz</loc>
+  <lastmod>2024-10-24T18:19:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973582-en_US-restaurants-1729793970.xml.gz</loc>
+  <lastmod>2024-10-24T18:19:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1973583-en_US-restaurants-1730032464.xml.gz</loc>
+  <lastmod>2024-10-27T12:34:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1974531-en_US-restaurants-1730782234.xml.gz</loc>
+  <lastmod>2024-11-05T04:50:34Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976657-en_US-restaurants-1730782235.xml.gz</loc>
+  <lastmod>2024-11-05T04:50:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976658-en_US-restaurants-1730782240.xml.gz</loc>
+  <lastmod>2024-11-05T04:50:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976659-en_US-restaurants-1730782244.xml.gz</loc>
+  <lastmod>2024-11-05T04:50:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976660-en_US-restaurants-1730782248.xml.gz</loc>
+  <lastmod>2024-11-05T04:50:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976661-en_US-restaurants-1730782252.xml.gz</loc>
+  <lastmod>2024-11-05T04:50:52Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976662-en_US-restaurants-1730782257.xml.gz</loc>
+  <lastmod>2024-11-05T04:50:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976663-en_US-restaurants-1730782261.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976664-en_US-restaurants-1730782265.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976665-en_US-restaurants-1730782269.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976666-en_US-restaurants-1730782274.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976667-en_US-restaurants-1730782278.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976668-en_US-restaurants-1730782283.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:23Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976669-en_US-restaurants-1730782287.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976670-en_US-restaurants-1730782291.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976671-en_US-restaurants-1730782296.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976672-en_US-restaurants-1730782300.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976673-en_US-restaurants-1730782305.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976674-en_US-restaurants-1730782309.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976675-en_US-restaurants-1730782313.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976676-en_US-restaurants-1730782318.xml.gz</loc>
+  <lastmod>2024-11-05T04:51:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976677-en_US-restaurants-1730782323.xml.gz</loc>
+  <lastmod>2024-11-05T04:52:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976678-en_US-restaurants-1730782328.xml.gz</loc>
+  <lastmod>2024-11-05T04:52:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1976679-en_US-restaurants-1731618836.xml.gz</loc>
+  <lastmod>2024-11-14T21:13:56Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979848-en_US-restaurants-1731618838.xml.gz</loc>
+  <lastmod>2024-11-14T21:13:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979849-en_US-restaurants-1731618844.xml.gz</loc>
+  <lastmod>2024-11-14T21:14:04Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979850-en_US-restaurants-1731618849.xml.gz</loc>
+  <lastmod>2024-11-14T21:14:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1979851-en_US-restaurants-1732771422.xml.gz</loc>
+  <lastmod>2024-11-28T05:23:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1982001-en_US-restaurants-1732771425.xml.gz</loc>
+  <lastmod>2024-11-28T05:23:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1982002-en_US-restaurants-1733253775.xml.gz</loc>
+  <lastmod>2024-12-03T19:22:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984061-en_US-restaurants-1733253777.xml.gz</loc>
+  <lastmod>2024-12-03T19:22:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984062-en_US-restaurants-1733253786.xml.gz</loc>
+  <lastmod>2024-12-03T19:23:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1984063-en_US-restaurants-1733253796.xml.gz</loc>
+  <lastmod>2024-12-03T19:23:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-4583-en_US-home-1474892942.xml.gz</loc>
+  <lastmod>2016-09-26T12:29:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1515573-en_US-smart_deals-1596831526.xml.gz</loc>
+  <lastmod>2020-08-07T20:18:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1591192-en_US-smart_deals-1686853881.xml.gz</loc>
+  <lastmod>2023-06-15T18:31:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806808-en_US-smart_deals-1686853885.xml.gz</loc>
+  <lastmod>2023-06-15T18:31:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806809-en_US-smart_deals-1717259078.xml.gz</loc>
+  <lastmod>2024-06-01T16:24:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1921310-en_US-smart_deals-1733586583.xml.gz</loc>
+  <lastmod>2024-12-07T15:49:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-12509-en_US-user_review-1474892942.xml.gz</loc>
+  <lastmod>2016-09-26T12:29:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1930276-en_US-hotel_feature-1718867420.xml.gz</loc>
+  <lastmod>2024-06-20T07:10:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1931439-en_US-hotel_feature-1718867421.xml.gz</loc>
+  <lastmod>2024-06-20T07:10:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1931440-en_US-hotel_feature-1718867424.xml.gz</loc>
+  <lastmod>2024-06-20T07:10:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1931441-en_US-hotel_feature-1718867427.xml.gz</loc>
+  <lastmod>2024-06-20T07:10:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1931442-en_US-hotel_feature-1718867431.xml.gz</loc>
+  <lastmod>2024-06-20T07:10:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1931443-en_US-hotel_feature-1718867434.xml.gz</loc>
+  <lastmod>2024-06-20T07:10:34Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1931444-en_US-hotel_feature-1719529243.xml.gz</loc>
+  <lastmod>2024-06-27T23:00:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934260-en_US-hotel_feature-1719529248.xml.gz</loc>
+  <lastmod>2024-06-27T23:00:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934261-en_US-hotel_feature-1719529252.xml.gz</loc>
+  <lastmod>2024-06-27T23:00:52Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934262-en_US-hotel_feature-1719529257.xml.gz</loc>
+  <lastmod>2024-06-27T23:00:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934263-en_US-hotel_feature-1719529262.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934264-en_US-hotel_feature-1719529266.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934265-en_US-hotel_feature-1719529271.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934266-en_US-hotel_feature-1719529275.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934267-en_US-hotel_feature-1719529279.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:19Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934268-en_US-hotel_feature-1719529283.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:23Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934269-en_US-hotel_feature-1719529287.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934270-en_US-hotel_feature-1719529291.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934271-en_US-hotel_feature-1719529295.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934272-en_US-hotel_feature-1719529299.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:39Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934273-en_US-hotel_feature-1719529303.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934274-en_US-hotel_feature-1719529306.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934275-en_US-hotel_feature-1719529310.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934276-en_US-hotel_feature-1719529313.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934277-en_US-hotel_feature-1719529316.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:56Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934278-en_US-hotel_feature-1719529319.xml.gz</loc>
+  <lastmod>2024-06-27T23:01:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934279-en_US-hotel_feature-1719529323.xml.gz</loc>
+  <lastmod>2024-06-27T23:02:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934280-en_US-hotel_feature-1719529326.xml.gz</loc>
+  <lastmod>2024-06-27T23:02:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934281-en_US-hotel_feature-1719529329.xml.gz</loc>
+  <lastmod>2024-06-27T23:02:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934282-en_US-hotel_feature-1719529332.xml.gz</loc>
+  <lastmod>2024-06-27T23:02:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1934283-en_US-hotel_feature-1719529336.xml.gz</loc>
+  <lastmod>2024-06-27T23:02:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-207390-en_US-airport-1705507002.xml.gz</loc>
+  <lastmod>2024-01-17T15:56:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1943696-en_US-site_index-1727658272.xml.gz</loc>
+  <lastmod>2024-09-30T01:04:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1964780-en_US-site_index-1728874573.xml.gz</loc>
+  <lastmod>2024-10-14T02:56:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1969346-en_US-site_index-1733586643.xml.gz</loc>
+  <lastmod>2024-12-07T15:50:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1654185-en_US-location_photos-1686854047.xml.gz</loc>
+  <lastmod>2023-06-15T18:34:07Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806822-en_US-location_photos-1733586646.xml.gz</loc>
+  <lastmod>2024-12-07T15:50:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-932747-en_US-show_forum-1733586648.xml.gz</loc>
+  <lastmod>2024-12-07T15:50:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1847705-en_US-show_topic-1700179646.xml.gz</loc>
+  <lastmod>2023-11-17T00:07:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858931-en_US-show_topic-1700179835.xml.gz</loc>
+  <lastmod>2023-11-17T00:10:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858932-en_US-show_topic-1700179918.xml.gz</loc>
+  <lastmod>2023-11-17T00:11:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858933-en_US-show_topic-1700180000.xml.gz</loc>
+  <lastmod>2023-11-17T00:13:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858934-en_US-show_topic-1700180065.xml.gz</loc>
+  <lastmod>2023-11-17T00:14:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858935-en_US-show_topic-1700180158.xml.gz</loc>
+  <lastmod>2023-11-17T00:15:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858936-en_US-show_topic-1700180251.xml.gz</loc>
+  <lastmod>2023-11-17T00:17:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858937-en_US-show_topic-1700180304.xml.gz</loc>
+  <lastmod>2023-11-17T00:18:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858938-en_US-show_topic-1700180364.xml.gz</loc>
+  <lastmod>2023-11-17T00:19:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858939-en_US-show_topic-1700180444.xml.gz</loc>
+  <lastmod>2023-11-17T00:20:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858940-en_US-show_topic-1700180499.xml.gz</loc>
+  <lastmod>2023-11-17T00:21:39Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858941-en_US-show_topic-1700180566.xml.gz</loc>
+  <lastmod>2023-11-17T00:22:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858942-en_US-show_topic-1700180628.xml.gz</loc>
+  <lastmod>2023-11-17T00:23:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858943-en_US-show_topic-1700180673.xml.gz</loc>
+  <lastmod>2023-11-17T00:24:33Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858944-en_US-show_topic-1700180713.xml.gz</loc>
+  <lastmod>2023-11-17T00:25:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858945-en_US-show_topic-1700180746.xml.gz</loc>
+  <lastmod>2023-11-17T00:25:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858946-en_US-show_topic-1700180787.xml.gz</loc>
+  <lastmod>2023-11-17T00:26:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858947-en_US-show_topic-1700180817.xml.gz</loc>
+  <lastmod>2023-11-17T00:26:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858949-en_US-show_topic-1700180864.xml.gz</loc>
+  <lastmod>2023-11-17T00:27:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858950-en_US-show_topic-1700180882.xml.gz</loc>
+  <lastmod>2023-11-17T00:28:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858951-en_US-show_topic-1700180900.xml.gz</loc>
+  <lastmod>2023-11-17T00:28:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858952-en_US-show_topic-1700180911.xml.gz</loc>
+  <lastmod>2023-11-17T00:28:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858953-en_US-show_topic-1700180922.xml.gz</loc>
+  <lastmod>2023-11-17T00:28:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858954-en_US-show_topic-1700180935.xml.gz</loc>
+  <lastmod>2023-11-17T00:28:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858955-en_US-show_topic-1700180944.xml.gz</loc>
+  <lastmod>2023-11-17T00:29:04Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858956-en_US-show_topic-1700180952.xml.gz</loc>
+  <lastmod>2023-11-17T00:29:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858957-en_US-show_topic-1700180961.xml.gz</loc>
+  <lastmod>2023-11-17T00:29:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858958-en_US-show_topic-1700180969.xml.gz</loc>
+  <lastmod>2023-11-17T00:29:29Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858959-en_US-show_topic-1700180976.xml.gz</loc>
+  <lastmod>2023-11-17T00:29:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858960-en_US-show_topic-1700180982.xml.gz</loc>
+  <lastmod>2023-11-17T00:29:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858961-en_US-show_topic-1700180990.xml.gz</loc>
+  <lastmod>2023-11-17T00:29:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858962-en_US-show_topic-1700180996.xml.gz</loc>
+  <lastmod>2023-11-17T00:29:56Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858963-en_US-show_topic-1700181003.xml.gz</loc>
+  <lastmod>2023-11-17T00:30:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858964-en_US-show_topic-1700181008.xml.gz</loc>
+  <lastmod>2023-11-17T00:30:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858965-en_US-show_topic-1700181015.xml.gz</loc>
+  <lastmod>2023-11-17T00:30:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858966-en_US-show_topic-1700181022.xml.gz</loc>
+  <lastmod>2023-11-17T00:30:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858968-en_US-show_topic-1700181035.xml.gz</loc>
+  <lastmod>2023-11-17T00:30:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858969-en_US-show_topic-1700181042.xml.gz</loc>
+  <lastmod>2023-11-17T00:30:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858970-en_US-show_topic-1700181047.xml.gz</loc>
+  <lastmod>2023-11-17T00:30:47Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858972-en_US-show_topic-1700181059.xml.gz</loc>
+  <lastmod>2023-11-17T00:30:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858973-en_US-show_topic-1700181064.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:04Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858974-en_US-show_topic-1700181068.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858975-en_US-show_topic-1700181072.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858976-en_US-show_topic-1700181078.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858977-en_US-show_topic-1700181084.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858978-en_US-show_topic-1700181088.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858979-en_US-show_topic-1700181093.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:33Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858980-en_US-show_topic-1700181097.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:37Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858981-en_US-show_topic-1700181101.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858982-en_US-show_topic-1700181106.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858983-en_US-show_topic-1700181110.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858984-en_US-show_topic-1700181115.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858985-en_US-show_topic-1700181119.xml.gz</loc>
+  <lastmod>2023-11-17T00:31:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858986-en_US-show_topic-1700181123.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858987-en_US-show_topic-1700181127.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:07Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858988-en_US-show_topic-1700181132.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858989-en_US-show_topic-1700181136.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858990-en_US-show_topic-1700181140.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858991-en_US-show_topic-1700181144.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858992-en_US-show_topic-1700181149.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:29Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858993-en_US-show_topic-1700181153.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:33Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858994-en_US-show_topic-1700181158.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858995-en_US-show_topic-1700181162.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858996-en_US-show_topic-1700181166.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858998-en_US-show_topic-1700181175.xml.gz</loc>
+  <lastmod>2023-11-17T00:32:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1858999-en_US-show_topic-1700181180.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:00Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859000-en_US-show_topic-1700181185.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859001-en_US-show_topic-1700181189.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859002-en_US-show_topic-1700181194.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859003-en_US-show_topic-1700181198.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859004-en_US-show_topic-1700181203.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:23Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859005-en_US-show_topic-1700181207.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859006-en_US-show_topic-1700181212.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859007-en_US-show_topic-1700181216.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859008-en_US-show_topic-1700181221.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859009-en_US-show_topic-1700181225.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859010-en_US-show_topic-1700181229.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859011-en_US-show_topic-1700181234.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859012-en_US-show_topic-1700181239.xml.gz</loc>
+  <lastmod>2023-11-17T00:33:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859013-en_US-show_topic-1700181243.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859014-en_US-show_topic-1700181248.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859016-en_US-show_topic-1700181258.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859017-en_US-show_topic-1700181266.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859018-en_US-show_topic-1700181270.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859019-en_US-show_topic-1700181275.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859020-en_US-show_topic-1700181279.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:39Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859021-en_US-show_topic-1700181284.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859022-en_US-show_topic-1700181289.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859023-en_US-show_topic-1700181294.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859024-en_US-show_topic-1700181299.xml.gz</loc>
+  <lastmod>2023-11-17T00:34:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859025-en_US-show_topic-1700181303.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859026-en_US-show_topic-1700181308.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859027-en_US-show_topic-1700181313.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859028-en_US-show_topic-1700181318.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859029-en_US-show_topic-1700181322.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859030-en_US-show_topic-1700181327.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859031-en_US-show_topic-1700181331.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859032-en_US-show_topic-1700181336.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859033-en_US-show_topic-1700181341.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859034-en_US-show_topic-1700181345.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859035-en_US-show_topic-1700181350.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859036-en_US-show_topic-1700181355.xml.gz</loc>
+  <lastmod>2023-11-17T00:35:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859037-en_US-show_topic-1700181360.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:00Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859038-en_US-show_topic-1700181365.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:05Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859039-en_US-show_topic-1700181370.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:10Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859040-en_US-show_topic-1700181375.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:15Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859041-en_US-show_topic-1700181380.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859042-en_US-show_topic-1700181385.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859043-en_US-show_topic-1700181389.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:29Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859044-en_US-show_topic-1700181394.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:34Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859045-en_US-show_topic-1700181399.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:39Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859046-en_US-show_topic-1700181404.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859048-en_US-show_topic-1700181413.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859049-en_US-show_topic-1700181418.xml.gz</loc>
+  <lastmod>2023-11-17T00:36:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859052-en_US-show_topic-1700181431.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859055-en_US-show_topic-1700181446.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859056-en_US-show_topic-1700181450.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859057-en_US-show_topic-1700181455.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859058-en_US-show_topic-1700181460.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859059-en_US-show_topic-1700181464.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859060-en_US-show_topic-1700181469.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859061-en_US-show_topic-1700181474.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859062-en_US-show_topic-1700181478.xml.gz</loc>
+  <lastmod>2023-11-17T00:37:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859063-en_US-show_topic-1700181483.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859064-en_US-show_topic-1700181489.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:09Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859065-en_US-show_topic-1700181494.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859066-en_US-show_topic-1700181498.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859067-en_US-show_topic-1700181505.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859068-en_US-show_topic-1700181510.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859069-en_US-show_topic-1700181515.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859070-en_US-show_topic-1700181519.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:39Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859071-en_US-show_topic-1700181524.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859072-en_US-show_topic-1700181529.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859073-en_US-show_topic-1700181534.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859074-en_US-show_topic-1700181538.xml.gz</loc>
+  <lastmod>2023-11-17T00:38:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859075-en_US-show_topic-1700181543.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859076-en_US-show_topic-1700181548.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859077-en_US-show_topic-1700181552.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859078-en_US-show_topic-1700181557.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859079-en_US-show_topic-1700181561.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859080-en_US-show_topic-1700181566.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859081-en_US-show_topic-1700181571.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859082-en_US-show_topic-1700181576.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859083-en_US-show_topic-1700181580.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859084-en_US-show_topic-1700181585.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859085-en_US-show_topic-1700181590.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859086-en_US-show_topic-1700181594.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859087-en_US-show_topic-1700181598.xml.gz</loc>
+  <lastmod>2023-11-17T00:39:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859088-en_US-show_topic-1700181603.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859089-en_US-show_topic-1700181608.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859090-en_US-show_topic-1700181613.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859091-en_US-show_topic-1700181618.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:18Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859092-en_US-show_topic-1700181622.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859093-en_US-show_topic-1700181627.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859094-en_US-show_topic-1700181632.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859095-en_US-show_topic-1700181636.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859096-en_US-show_topic-1700181641.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859097-en_US-show_topic-1700181645.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859098-en_US-show_topic-1700181650.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859099-en_US-show_topic-1700181655.xml.gz</loc>
+  <lastmod>2023-11-17T00:40:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859100-en_US-show_topic-1700181660.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:00Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859104-en_US-show_topic-1700181681.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859105-en_US-show_topic-1700181686.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859106-en_US-show_topic-1700181691.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859107-en_US-show_topic-1700181696.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:36Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859108-en_US-show_topic-1700181701.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859109-en_US-show_topic-1700181706.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859110-en_US-show_topic-1700181711.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:51Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859111-en_US-show_topic-1700181717.xml.gz</loc>
+  <lastmod>2023-11-17T00:41:57Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859112-en_US-show_topic-1700181722.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859113-en_US-show_topic-1700181726.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859114-en_US-show_topic-1700181731.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859115-en_US-show_topic-1700181736.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859116-en_US-show_topic-1700181741.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859117-en_US-show_topic-1700181746.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859118-en_US-show_topic-1700181751.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859119-en_US-show_topic-1700181755.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859121-en_US-show_topic-1700181765.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859122-en_US-show_topic-1700181770.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859123-en_US-show_topic-1700181775.xml.gz</loc>
+  <lastmod>2023-11-17T00:42:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859127-en_US-show_topic-1700181797.xml.gz</loc>
+  <lastmod>2023-11-17T00:43:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859129-en_US-show_topic-1700181808.xml.gz</loc>
+  <lastmod>2023-11-17T00:43:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859130-en_US-show_topic-1700181818.xml.gz</loc>
+  <lastmod>2023-11-17T00:43:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859131-en_US-show_topic-1700181828.xml.gz</loc>
+  <lastmod>2023-11-17T00:43:48Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859132-en_US-show_topic-1700181833.xml.gz</loc>
+  <lastmod>2023-11-17T00:43:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859133-en_US-show_topic-1700181838.xml.gz</loc>
+  <lastmod>2023-11-17T00:43:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859134-en_US-show_topic-1700181843.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859135-en_US-show_topic-1700181848.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:08Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859136-en_US-show_topic-1700181852.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859137-en_US-show_topic-1700181857.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859138-en_US-show_topic-1700181862.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859139-en_US-show_topic-1700181867.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:27Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859140-en_US-show_topic-1700181872.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:32Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859141-en_US-show_topic-1700181877.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:37Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859142-en_US-show_topic-1700181881.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859143-en_US-show_topic-1700181886.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859144-en_US-show_topic-1700181891.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:51Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859145-en_US-show_topic-1700181896.xml.gz</loc>
+  <lastmod>2023-11-17T00:44:56Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859146-en_US-show_topic-1700181901.xml.gz</loc>
+  <lastmod>2023-11-17T00:45:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859147-en_US-show_topic-1700181906.xml.gz</loc>
+  <lastmod>2023-11-17T00:45:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859148-en_US-show_topic-1700181911.xml.gz</loc>
+  <lastmod>2023-11-17T00:45:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859149-en_US-show_topic-1700181916.xml.gz</loc>
+  <lastmod>2023-11-17T00:45:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859150-en_US-show_topic-1700181921.xml.gz</loc>
+  <lastmod>2023-11-17T00:45:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859151-en_US-show_topic-1700181926.xml.gz</loc>
+  <lastmod>2023-11-17T00:45:26Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859153-en_US-show_topic-1700181935.xml.gz</loc>
+  <lastmod>2023-11-17T00:45:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859154-en_US-show_topic-1700181940.xml.gz</loc>
+  <lastmod>2023-11-17T00:45:40Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859158-en_US-show_topic-1700181961.xml.gz</loc>
+  <lastmod>2023-11-17T00:46:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859159-en_US-show_topic-1700181966.xml.gz</loc>
+  <lastmod>2023-11-17T00:46:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859160-en_US-show_topic-1700181971.xml.gz</loc>
+  <lastmod>2023-11-17T00:46:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859161-en_US-show_topic-1700181977.xml.gz</loc>
+  <lastmod>2023-11-17T00:46:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859162-en_US-show_topic-1700181982.xml.gz</loc>
+  <lastmod>2023-11-17T00:46:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859164-en_US-show_topic-1700181993.xml.gz</loc>
+  <lastmod>2023-11-17T00:46:33Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1859165-en_US-show_topic-1700748772.xml.gz</loc>
+  <lastmod>2023-11-23T14:12:52Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1863961-en_US-show_topic-1705507971.xml.gz</loc>
+  <lastmod>2024-01-17T16:12:51Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876098-en_US-show_topic-1705507996.xml.gz</loc>
+  <lastmod>2024-01-17T16:13:16Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876099-en_US-show_topic-1705508002.xml.gz</loc>
+  <lastmod>2024-01-17T16:13:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876100-en_US-show_topic-1705508015.xml.gz</loc>
+  <lastmod>2024-01-17T16:13:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876101-en_US-show_topic-1705508023.xml.gz</loc>
+  <lastmod>2024-01-17T16:13:43Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876102-en_US-show_topic-1705508032.xml.gz</loc>
+  <lastmod>2024-01-17T16:13:52Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876103-en_US-show_topic-1705508039.xml.gz</loc>
+  <lastmod>2024-01-17T16:13:59Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876104-en_US-show_topic-1705508046.xml.gz</loc>
+  <lastmod>2024-01-17T16:14:06Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876105-en_US-show_topic-1705508050.xml.gz</loc>
+  <lastmod>2024-01-17T16:14:10Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1876106-en_US-show_topic-1710457691.xml.gz</loc>
+  <lastmod>2024-03-14T23:08:11Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1897191-en_US-show_topic-1715420678.xml.gz</loc>
+  <lastmod>2024-05-11T09:44:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1914495-en_US-show_topic-1720717442.xml.gz</loc>
+  <lastmod>2024-07-11T17:04:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939063-en_US-show_topic-1720717453.xml.gz</loc>
+  <lastmod>2024-07-11T17:04:13Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939064-en_US-show_topic-1721345712.xml.gz</loc>
+  <lastmod>2024-07-18T23:35:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939807-en_US-show_topic-1721345723.xml.gz</loc>
+  <lastmod>2024-07-18T23:35:23Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939808-en_US-show_topic-1721345729.xml.gz</loc>
+  <lastmod>2024-07-18T23:35:29Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939809-en_US-show_topic-1721345733.xml.gz</loc>
+  <lastmod>2024-07-18T23:35:33Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939810-en_US-show_topic-1721345737.xml.gz</loc>
+  <lastmod>2024-07-18T23:35:37Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939811-en_US-show_topic-1721345742.xml.gz</loc>
+  <lastmod>2024-07-18T23:35:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939812-en_US-show_topic-1721345746.xml.gz</loc>
+  <lastmod>2024-07-18T23:35:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1939813-en_US-show_topic-1725490801.xml.gz</loc>
+  <lastmod>2024-09-04T23:00:01Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1959030-en_US-show_topic-1726104864.xml.gz</loc>
+  <lastmod>2024-09-12T01:34:24Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960362-en_US-show_topic-1726765217.xml.gz</loc>
+  <lastmod>2024-09-19T17:00:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961981-en_US-show_topic-1726765231.xml.gz</loc>
+  <lastmod>2024-09-19T17:00:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961982-en_US-show_topic-1726765239.xml.gz</loc>
+  <lastmod>2024-09-19T17:00:39Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961983-en_US-show_topic-1726765245.xml.gz</loc>
+  <lastmod>2024-09-19T17:00:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961984-en_US-show_topic-1726765249.xml.gz</loc>
+  <lastmod>2024-09-19T17:00:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1961985-en_US-show_topic-1729200192.xml.gz</loc>
+  <lastmod>2024-10-17T21:23:12Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1971454-en_US-show_topic-1730993107.xml.gz</loc>
+  <lastmod>2024-11-07T15:25:07Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1977054-en_US-show_topic-1733586649.xml.gz</loc>
+  <lastmod>2024-12-07T15:50:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-878038-en_US-neighborhood-1731619049.xml.gz</loc>
+  <lastmod>2024-11-14T21:17:29Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1634139-en_US-neighborhood_list-1619639654.xml.gz</loc>
+  <lastmod>2021-04-28T19:54:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1806925-en_US-flights-1722151535.xml.gz</loc>
+  <lastmod>2024-07-28T07:25:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1942678-en_US-flights-1722151538.xml.gz</loc>
+  <lastmod>2024-07-28T07:25:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1942679-en_US-flights-1722151541.xml.gz</loc>
+  <lastmod>2024-07-28T07:25:41Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1942680-en_US-flights-1722151545.xml.gz</loc>
+  <lastmod>2024-07-28T07:25:45Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1942750-en_US-flights-1723067400.xml.gz</loc>
+  <lastmod>2024-08-07T21:50:00Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1951295-en_US-flights-1724274829.xml.gz</loc>
+  <lastmod>2024-08-21T21:13:49Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1951381-en_US-flights-1724928595.xml.gz</loc>
+  <lastmod>2024-08-29T10:49:55Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1959034-en_US-flights-1726105094.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:14Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960363-en_US-flights-1726105097.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:17Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960364-en_US-flights-1726105101.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960365-en_US-flights-1726105105.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:25Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960366-en_US-flights-1726105109.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:29Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960367-en_US-flights-1726105114.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:34Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960368-en_US-flights-1726105118.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:38Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960369-en_US-flights-1726105122.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:42Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960370-en_US-flights-1726105126.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:46Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960371-en_US-flights-1726105130.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:50Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960372-en_US-flights-1726105134.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:54Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960373-en_US-flights-1726105138.xml.gz</loc>
+  <lastmod>2024-09-12T01:38:58Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960374-en_US-flights-1726105142.xml.gz</loc>
+  <lastmod>2024-09-12T01:39:02Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1960375-en_US-flights-1733254111.xml.gz</loc>
+  <lastmod>2024-12-03T19:28:31Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-307921-en_US-cheap_flights_home-1487077520.xml.gz</loc>
+  <lastmod>2017-02-14T13:05:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-307922-en_US-airline_fees-1487077520.xml.gz</loc>
+  <lastmod>2017-02-14T13:05:20Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-937870-en_US-airline_review-1714616213.xml.gz</loc>
+  <lastmod>2024-05-02T02:16:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-307924-en_US-airlines-1487077521.xml.gz</loc>
+  <lastmod>2017-02-14T13:05:21Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-937871-en_US-airline_deals-1714616213.xml.gz</loc>
+  <lastmod>2024-05-02T02:16:53Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-914284-en_US-business-1515848744.xml.gz</loc>
+  <lastmod>2018-01-13T13:05:44Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1056600-en_US-cruises-1733586688.xml.gz</loc>
+  <lastmod>2024-12-07T15:51:28Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1128510-en_US-cruise_ships-1556295231.xml.gz</loc>
+  <lastmod>2019-04-26T16:13:51Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1128511-en_US-cruise_review-1727658395.xml.gz</loc>
+  <lastmod>2024-09-30T01:06:35Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1149035-en_US-cruise_destination-1561011022.xml.gz</loc>
+  <lastmod>2019-06-20T06:10:22Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1482961-en_US-rentalcars_review-1732771623.xml.gz</loc>
+  <lastmod>2024-11-28T05:27:03Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1196959-en_US-articles-1733586690.xml.gz</loc>
+  <lastmod>2024-12-07T15:51:30Z</lastmod>
+</sitemap>
+<sitemap>
+  <loc>https://www.tripadvisor.com/sitemap/2/en_US/sitemap-1798281-en_US-hotel_category-1684667378.xml.gz</loc>
+  <lastmod>2023-05-21T11:09:38Z</lastmod>
+</sitemap>
+</sitemapindex>

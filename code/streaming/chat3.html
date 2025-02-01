@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Streaming Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        #controls {
+            margin: 20px 0;
+        }
+        #messages {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .message {
+            margin: 5px 0;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+        .status {
+            color: #666;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        .status.connected { color: green; }
+        .status.disconnected { color: red; }
+        .complete { background-color: #e6ffe6; }
+    </style>
+</head>
+<body>
+    <h1>Real-time Stream</h1>
+    <div id="controls">
+        <button onclick="startStream('infinite')">Start Infinite Stream</button>
+        <button onclick="startStream('finite')">Start 5-Message Stream</button>
+        <button onclick="startStream('count', 3)">Start 3-Message Stream</button>
+        <button onclick="stopStream()">Stop Stream</button>
+    </div>
+    <div id="status" class="status">Initializing...</div>
+    <div id="messages"></div>
+
+    <script>
+        const messagesDiv = document.getElementById('messages');
+        const statusDiv = document.getElementById('status');
+        let eventSource = null;
+        
+        function updateStatus(message, isConnected) {
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${isConnected ? 'connected' : 'disconnected'}`;
+        }
+        
+        function stopStream() {
+            if (eventSource) {
+                eventSource.close();
+                eventSource = null;
+                updateStatus('Stream stopped by user', false);
+            }
+        }
+        
+        function startStream(type, count) {
+            // Clear previous messages
+            messagesDiv.innerHTML = '';
+            
+            // Close existing connection if any
+            if (eventSource) {
+                eventSource.close();
+            }
+            
+            updateStatus('Connecting...', false);
+            
+            // Create URL with parameters
+            const url = new URL('http://localhost:8000/stream');
+            url.searchParams.set('type', type);
+            if (count) {
+                url.searchParams.set('count', count);
+            }
+            
+            eventSource = new EventSource(url);
+            
+            eventSource.onopen = function() {
+                updateStatus('Connected', true);
+            };
+            
+            // Listen for specific event types
+            eventSource.addEventListener('complete', function(event) {
+                const data = JSON.parse(event.data);
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message complete';
+                messageDiv.textContent = `${data.timestamp}: Stream completed`;
+                messagesDiv.appendChild(messageDiv);
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+                
+                // Close connection after completion
+                eventSource.close();
+                updateStatus('Stream completed', false);
+            });
+            
+            // Regular messages
+            eventSource.onmessage = function(event) {
+                try {
+                    const data = JSON.parse(event.data);
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'message';
+                    messageDiv.textContent = `${data.timestamp}: ${data.value}`;
+                    messagesDiv.appendChild(messageDiv);
+                    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+                } catch (error) {
+                    console.error('Error processing message:', error);
+                }
+            };
+            
+            eventSource.onerror = function(error) {
+                console.error('EventSource failed:', error);
+                eventSource.close();
+                updateStatus('Connection lost', false);
+            };
+        }
+    </script>
+</body>
+</html>
