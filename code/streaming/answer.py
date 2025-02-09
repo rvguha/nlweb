@@ -244,7 +244,7 @@ def send_results(request_handler, results):
         #    "cons": result["ranking"].cons,
             "schema_object": result["schema_object"]
         })
-    to_send = {"message_type": "result_batch", "results": json_results}
+    to_send = {"message_type": "res ult_batch", "results": json_results}
     request_handler.wfile.write(("data: " + json.dumps(to_send) + "\n\n").encode("utf-8"))
     request_handler.wfile.flush()
     num_results_sent += len(json_results)

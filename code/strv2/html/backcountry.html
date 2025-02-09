@@ -1,5 +1,6 @@
 <html>
 <head>
+  
     <script>
      
      function searchAction() {
@@ -203,6 +204,7 @@
     return info;
   }
 
+ 
   createProductCard(response) {
     const schema_object = response.schema_object;
     const info = this.extractProductInfo(schema_object);
@@ -343,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <div id="searchResults"></div>
   
-
+   
     <img id="bottom-banner" src="BackCountryBottom.png" />
 </center>
     <br/> <br/>

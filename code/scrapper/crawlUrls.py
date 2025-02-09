@@ -45,11 +45,14 @@ def crawl_urls(input_file, target_dir):
                 
             # Fetch URL content
             response = client.get(url)
+            if (len(response.text) < 1000):
+                print(f"Too small ({len(response.text)} bytes) for {url}")
+                continue
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(response.text)
 
             print(f"Successfully crawled: {url} %i " % (len(response.text)))
-            time.sleep(1)
+            time.sleep(2)
         except Exception as e:
             print(f"Error crawling {url}: {str(e)}")
             # Sleep for 5 seconds between requests
