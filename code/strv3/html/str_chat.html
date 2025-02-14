@@ -1,0 +1,181 @@
+<html>
+<style>
+ .chat-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 70px 20px 100px 20px;
+    padding-bottom: 100px;
+    font-family: sans-serif;
+  }
+
+  .strmessages {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    padding: 70px 20px 100px 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: sans-serif;
+  }
+  .footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .footer {
+    width: 70%;
+    max-width: 700px;
+    height: 50px;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #eee;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        z-index: 1000;
+    }
+
+    .input-area {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .send-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background: #0056b3;
+  }
+
+  .messages {
+    height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    display: flex;
+  }
+  
+  .user-message {
+    justify-content: flex-end;
+  }
+  
+  .assistant-message {
+    justify-content: flex-start;
+  }
+
+  .message-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+
+  
+  
+  .user-message .message-bubble {
+    background: #007bff;
+    color: white;
+  }
+  
+  .assistant-message .message-bubble {
+    background: #f9f9f9; // #e9ecef;
+    color: black;
+  }
+
+</style>
+<script type="application/javascript" src="/html/events.js"></script>
+<script type="application/javascript" src="/html/streaming.js"></script>
+<script type="application/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  const chat = new ChatInterface(null, null, mode="dropdown");
+});
+
+</script>
+
+<body>
+  <div id="chat-container" class="chat-container">
+  <div id="selectors" class="header">
+    <div id="selectors" class="header" align="left">
+      <span> <small> Site </small> </span>
+      <select id="site-select">
+        <option value="imdb">imdb</option>
+        <option value="seriouseats">seriouseats</option>
+        <option value="npr podcasts">npr podcasts</option>
+        <option value="backcountry">backcountry</option>
+        <option value="neurips">neurips</option>
+        <option value="zillow">zillow</option>
+        <option value="tripadvisor">tripadvisor</option>
+        <option value="woksoflife">woksoflife</option>
+        <option value="cheftariq">cheftariq</option>
+        <option value="hebbarskitchen">hebbarskitchen</option>
+        <option value="latam_recipes">latam_recipes</option>
+        <option value="spruce">spruce</option>
+        <option value="all">all</option>
+      </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span><small>Model</small> </span>
+        <select id="model-select">
+          <option value="gpt-4o-mini">gpt-4o-mini</option>
+          <option value="gpt-4o">gpt-4o</option>
+          <option value="gemini-1.5-flash">gemini-1.5-flash</option>
+          <option value="gemini-1.5-pro">gemini-1.5-pro</option>
+          <option value="gemini-2.0-flash-exp">gemini-2.0-flash-exp</option>
+          <option value="claude-3-5-sonnet-latest">claude-3-5-sonnet-latest</option>
+          <option value="claude-3-5-haiku-latest">claude-3-5-haiku-latest</option>
+        </select>
+          
+        <span title="Clear chat history">
+          <img id="clear-icon" src="/html/clear.jpeg" width="16" height="16" style="vertical-align: middle; cursor: pointer; margin-left: 8px;">
+        </span>
+        </div>
+
+
+  </div>
+  <div id="messages" class="strmessages"></div>
+  <div class="footer-container">
+  <div id="user-input" class="footer">
+  <textarea width="80%" class="message-input" id="message-input"></textarea>&nbsp;
+  <button id="send-button" class="send-button">Send</button>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>

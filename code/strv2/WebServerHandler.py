@@ -16,6 +16,7 @@ from concurrent.futures import ThreadPoolExecutor
 import utils
 from recipe import RecipeHandler
 from latam import LatamHandler
+from imdb2 import Imdb2Handler
 import retriever
 
 # Configure logging
@@ -35,7 +36,6 @@ def setup_logging():
         maxBytes=10*1024*1024,  # 10MB
         backupCount=5
     )
-    print("file_handler", file_handler)
     file_handler.setFormatter(log_formatter)
     
     # Console handler
@@ -47,6 +47,11 @@ def setup_logging():
     root_logger.setLevel(logging.INFO)
     root_logger.addHandler(file_handler)
     root_logger.addHandler(console_handler)
+    
+    # Suppress HTTP request logging
+    logging.getLogger('httpx').setLevel(logging.WARNING)
+    logging.getLogger('urllib3').setLevel(logging.WARNING)
+    logging.getLogger('http.client').setLevel(logging.WARNING)
     
     return root_logger
 
@@ -74,7 +79,10 @@ class StreamingHandler(SimpleHTTPRequestHandler):
     def siteToClass(self, site):
         self.logger.debug(f"Converting site '{site}' to handler class")
         item_type = utils.siteToItemType(site)
-        if site == "latam_recipes":
+        if site == "imdb2":
+            self.logger.debug("Selected ImdbHandler for imdb")
+            return Imdb2Handler
+        elif site == "latam_recipes":
             self.logger.debug("Selected LatamHandler for latam_recipes")
             return LatamHandler
         elif item_type == "Recipe":
@@ -184,7 +192,7 @@ class StreamingHandler(SimpleHTTPRequestHandler):
             self.logger.error(f"[{request_id}] Traceback: {traceback.format_exc()}")
             raise
     
-    async def write_stream(self, message):
+    async     def write_stream(self, message):
         """
         Asynchronously write a message to the SSE stream.
         
@@ -193,7 +201,6 @@ class StreamingHandler(SimpleHTTPRequestHandler):
         """
         try:
             data = f"data: {json.dumps(message)}\n\n"
-            self.logger.debug(f"Writing stream data: {message.get('message_type', 'unknown')}")
             self.wfile.write(data.encode('utf-8'))
             self.wfile.flush()
             await asyncio.sleep(0)
@@ -209,7 +216,6 @@ class StreamingHandler(SimpleHTTPRequestHandler):
             raise
 
     def _send_cors_headers(self):
-        self.logger.debug("Sending CORS headers")
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
@@ -222,7 +228,6 @@ class StreamingHandler(SimpleHTTPRequestHandler):
 
     def _start_sse_response(self):
         """Setup SSE response headers"""
-        self.logger.debug("Starting SSE response")
         self.send_response(200)
         self.send_header('Content-Type', 'text/event-stream')
         self.send_header('Cache-Control', 'no-cache')
@@ -231,4 +236,3 @@ class StreamingHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.flush()
         self.request.settimeout(10)
-        self.logger.debug("SSE response headers sent")

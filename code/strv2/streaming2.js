@@ -296,7 +296,7 @@ class ChatInterface {
 
     sites () {
       return ['imdb', 'seriouseats', 'npr podcasts', 'backcountry', 'neurips', 'zillow',
-      'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'imdb2', 'all'];
+      'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'all'];
     }
     createSelectors() {
         // Create selectors

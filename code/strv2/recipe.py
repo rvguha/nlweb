@@ -44,8 +44,8 @@ The item is: {description}.""",
         self.dietary_restriction = response["dietary_restriction"]
         if (self.is_dietary_restriction == "True"):
             message = {"message_type": "remember", "item_to_remember": self.dietary_restriction, "message": "I'll remember that"}
+            self.http_handler.logger.info(f"I'll remember that {self.dietary_restriction}")
             await self.http_handler.write_stream(message)
-            print(f"I'll remember that {self.dietary_restriction}")
        
 
 

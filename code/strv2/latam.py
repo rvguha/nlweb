@@ -1,6 +1,6 @@
 import json
 import asyncio
-from recipe import RecipeHandler
+from recipe import RecipeHandler   
 import mllm
 import utils
 
@@ -30,11 +30,13 @@ class LatamHandler(RecipeHandler):
                     asyncio.create_task(self.analyzeQueryForItemType()),
                     asyncio.create_task(self.decontextualizeQuery())]
         await asyncio.gather(*task_set)
+        self.http_handler.logger.info(f"item_type in latam: {self.item_type}")
         if (self.item_type != utils.siteToItemType(self.site)):
              sites = utils.itemTypeToSite(self.item_type)
              message = {"message_type": "remember", "item_to_remember": 
                        self.query, "message": "Asking " + " ".join(sites)}
              await self.http_handler.write_stream(message)
+             self.http_handler.logger.info(f"Setting site to {sites}")
              self.site = sites 
 
 

@@ -191,6 +191,17 @@ class ChatInterface {
         this.prevMessages = []
       });
   
+      // Create clear chat icon
+      const clearIcon = document.createElement('span');
+      clearIcon.innerHTML = '<img src="/html/clear.jpeg" width="16" height="16" style="vertical-align: middle; cursor: pointer; margin-left: 8px;">';
+      clearIcon.title = "Clear chat history";
+      clearIcon.addEventListener('click', () => {
+        this.messagesArea.innerHTML = '';
+        this.messages = [];
+        this.prevMessages = [];
+      });
+      this.selector.appendChild(clearIcon);
+
       this.container.appendChild(this.selector);
     }
   

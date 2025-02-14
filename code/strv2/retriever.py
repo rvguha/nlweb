@@ -7,6 +7,8 @@ def search_db(query, site, num_results=50):
     print(f"query: {query}, site: {site}")
     embedding = mllm.get_embedding(query)
     client = milvus_client_prod 
+    if (site == "imdb2"):
+        site = "imdb"
     if (site == "all"):
         res = client.search(
             collection_name="prod_collection",

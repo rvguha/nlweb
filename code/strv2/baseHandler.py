@@ -43,6 +43,7 @@ The item is: {description}.
         self.rankedAnswers = []
         self.num_results_sent = 0
         self.sites_in_embeddings_sent = False
+        self.streaming = True
 
 
     def get_formatted_string(self):
@@ -88,11 +89,9 @@ The item is: {description}.
             'schema_object': json_str,
             'sent': False
         }
-        if (ranking["score"] > EARLY_SEND_THRESHOLD):
+        if (ranking["score"] > EARLY_SEND_THRESHOLD and self.streaming):
             await self.sendAnswers([ansr])
-            self.rankedAnswers.append(ansr)
-        else:
-            self.rankedAnswers.append(ansr)
+        self.rankedAnswers.append(ansr)
 
 
     def shouldSend(self, result):
@@ -103,10 +102,10 @@ The item is: {description}.
                 return True
         return False
     
-    async def sendAnswers(self, answers):
+    async def sendAnswers(self, answers, force=False):
         json_results = []
         for result in answers:
-            if self.shouldSend(result):
+            if self.shouldSend(result) or force:
                 json_results.append({
                     "url": result["url"],
                     "name": result["name"],
@@ -117,14 +116,19 @@ The item is: {description}.
                     "explanation": result["ranking"]["explanation"],
                     "schema_object": result["schema_object"],
                 })
-            result["sent"] = True
-        try:
-            to_send = {"message_type": "result_batch", "results": json_results, "query_id": self.query_id}
-            await self.http_handler.write_stream(to_send)
-            self.num_results_sent += len(json_results)
-        except (BrokenPipeError, ConnectionResetError):
-         #   print("Client disconnected while sending answers")
-            raise
+                if (self.streaming):
+                    result["sent"] = True
+            
+        if (self.streaming):
+            try:
+                print(f"sending {len(json_results)} results")
+                to_send = {"message_type": "result_batch", "results": json_results, "query_id": self.query_id}
+                await self.http_handler.write_stream(to_send)
+                self.num_results_sent += len(json_results)
+            except (BrokenPipeError, ConnectionResetError):
+                #   print("Client disconnected while sending answers")
+                raise
+        
 
     def prettyPrintSite(self, site):
         ans = site.replace("_", " ")
@@ -167,17 +171,17 @@ The item is: {description}.
         if (self.num_results_sent > NUM_RESULTS_TO_SEND):
             print("returning without looking at remaining results")
             return
-       
-        
+   #     print(f"results: {results}")
         # Sort by score in descending order
         sorted_results = sorted(results, key=lambda x: x['ranking']["score"], reverse=True)
         good_results = [x for x in sorted_results if x['ranking']["score"] > 51]
         medium_results = [x for x in sorted_results if x['ranking']["score"] > 35 and x['ranking']["score"] < 51]
+        print(f"num_results_sent: {self.num_results_sent}, len(results): {len(good_results)}")
+
         if (len(good_results) + self.num_results_sent >= NUM_RESULTS_TO_SEND):
-            await self.sendAnswers(good_results[:NUM_RESULTS_TO_SEND - self.num_results_sent + 1])
+            tosend = good_results[:NUM_RESULTS_TO_SEND - self.num_results_sent + 1]
+            print(f"sending {len(tosend)} results")
+            await self.sendAnswers(tosend, force=True)
         else:
-            await self.sendAnswers(good_results)
+            await self.sendAnswers(good_results, force=True)
             self.num_results_sent = self.num_results_sent + len(good_results)
-        if (self.num_results_sent < 7):
-          #  self.send_poor_results_message(medium_results)
-            await self.sendAnswers(medium_results)

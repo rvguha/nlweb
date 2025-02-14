@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  .site-selector {
+    padding: 8px 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .site-selector select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+    min-width: 120px;
+  }
+
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  .message {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .user-message {
+    background: #ffffff;
+  }
+
+  .assistant-message {
+    background: #f7f7f8;
+  }
+
+  .message-bubble {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .input-area {
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0;
+    background: #ffffff;
+    position: sticky;
+    bottom: 0;
+  }
+
+  .input-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+  }
+
+  .message-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    resize: none;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.05);
+    min-height: 44px;
+    max-height: 200px;
+    padding-right: 48px; /* Space for send button */
+  }
+
+  .message-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px #2563eb;
+  }
+
+  .send-button {
+    position: absolute;
+    right: 32px;
+    bottom: 8px;
+    padding: 4px 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #2563eb;
+    border-radius: 6px;
+  }
+
+  .send-button:hover {
+    background: #f0f0f0;
+  }
+
+  .remember-message {
+    font-weight: 500;
+    color: #374151;
+    max-width: 800px;
+    margin: 0 auto 1em;
+  }
+</style>
+</head>
+<body>
+  <div id="chat-container" class="chat-container"></div>
+  <script type="application/javascript" src="/html/streaming-js.js"></script>
+  <script type="application/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      const chat = new ChatInterface(null, null, mode="dropdown");
+    });
+  </script>
+</body>
+</html>

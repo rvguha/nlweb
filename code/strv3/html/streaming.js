@@ -1,255 +1,3 @@
-const styles = `
-  .chat-container {
-  /*  max-width: 600px;
-    max-height: 600px; */
-    height: 80%;
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: sans-serif;
-  }
-  
-  .site-selector {
-    margin-bottom: 20px;
-  }
-
-  .site-selector select {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .messages {
-   /* max-height: 500px;
-    max-width: 500px; */
-    height: 80%;
-    width: 80%;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 2px;
-  }
-
-   .messages_full {
-   /* max-height: 500px;
-    max-width: 500px; */
-    height: 95%;
-    width: 100%;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .message {
-    margin-bottom: 15px;
-    display: flex;
-  }
-  
-  .user-message {
-    justify-content: flex-end;
-  }
-  
-  .assistant-message {
-    justify-content: flex-start;
-  }
-
-  .remember-message {
-    font-weight: bold;
-  /  font-size: 0.8em;
-    color: #333333;
-    justify-content: flex-start;
-    margin-bottom: 1em;
-  }
-
-  .item-detail-message {
-    font-size: 0.9em;
-    color: #333333;
-    justify-content: flex-start;
-   / margin-bottom: 0.5em;
-  }
-  
-  .message-bubble {
-    max-width: 90%;
-    padding: 10px 15px;
-    border-radius: 15px;
-  }
-
-  .user-message .message-bubble {
-    background: #007bff;
-    color: white;
-  }
-  
-  .assistant-message .message-bubble {
-    background: #f9f9f9; // #e9ecef;
-    color: black;
-  }
-  
-  .input-area {
-    display: flex;
-    gap: 10px;
-    width: 87%;
-  }
-
-   .input-area_full {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-  }
-  
-  .message-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .send-button {
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .send-button:hover {
-    background: #0056b3;
-  }
-
-  .intermediate-container {
-    padding: 20px 0;
-    font-weight: bold;
-    font-size: 0.8em;
-    color: #333333;
-  }
-`;
-
-// Add styles to document
-const styleSheet = document.createElement("style");
-styleSheet.textContent = styles;
-document.head.appendChild(styleSheet);
-
-class ManagedEventSource {
-  constructor(url, options = {}) {
-    this.url = url;
-    this.options = options;
-    this.maxRetries = options.maxRetries || 3;
-    this.retryCount = 0;
-    this.eventSource = null;
-    this.isStopped = false;
-  }
-
-  connect(chatInterface) {
-    if (this.isStopped) {
-      return;
-    }
-    this.eventSource = new EventSource(this.url);
-    this.eventSource.chatInterface = chatInterface;
-    this.eventSource.onopen = () => {
-    //  console.log('Connection established');
-      this.retryCount = 0; // Reset retry count on successful connection
-    };
-
-    this.eventSource.onerror = (error) => {
-      if (this.eventSource.readyState === EventSource.CLOSED) {
-        console.log('Connection was closed');
-        
-        if (this.retryCount < this.maxRetries) {
-          this.retryCount++;
-          console.log(`Retry attempt ${this.retryCount} of ${this.maxRetries}`);
-          
-          // Implement exponential backoff
-          const backoffTime = Math.min(1000 * Math.pow(2, this.retryCount), 10000);
-          setTimeout(() => this.connect(), backoffTime);
-        } else {
-          console.log('Max retries reached, stopping reconnection attempts');
-          this.stop();
-        }
-      }
-    }
-
-    this.eventSource.onmessage = function(event) {
-      if (this.chatInterface.dotsStillThere) {
-        this.chatInterface.handleFirstMessage(event);
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `message assistant-message`;
-        const bubble = document.createElement('div'); 
-        bubble.className = 'message-bubble';
-        messageDiv.appendChild(bubble);
-        this.chatInterface.bubble = bubble;
-        this.chatInterface.messagesArea.appendChild(messageDiv);
-        this.chatInterface.currentItems = []
-        this.chatInterface.thisRoundRemembered = null;
-      }
-      const data = JSON.parse(event.data);
-      if (data && data.message_type == "query_analysis") {
-        this.chatInterface.itemToRemember.push(data.item_to_remember);
-        this.chatInterface.decontextualizedQuery = data.decontextualized_query;
-        this.chatInterface.possiblyAnnotateUserQuery(this.chatInterface, data.decontextualized_query);
-        if (this.chatInterface.itemToRemember) {
-          this.chatInterface.memoryMessage(data.item_to_remember, this.chatInterface)
-        }
-      } else if (data && data.message_type == "remember") {
-        this.chatInterface.memoryMessage(data.message, this.chatInterface)          
-      } else if (data && data.message_type == "result_batch") {
-        for (const item of data.results) {
-          const domItem = this.chatInterface.createJsonItemHtml(item)
-          this.chatInterface.currentItems.push([item, domItem])
-          this.chatInterface.bubble.appendChild(domItem);
-          this.chatInterface.num_results_sent++;
-        }
-        this.chatInterface.resortResults(this.chatInterface);
-      } else if (data && data.message_type == "intermediate_message") {
-        this.chatInterface.bubble.appendChild(this.chatInterface.createIntermediateMessageHtml(data.message));
-      } else if (data && data.message_type == "complete") {
-        this.chatInterface.resortResults(this.chatInterface);
-        this.chatInterface.scrollDiv.scrollIntoView();
-        this.close();
-      }
-    }
-  }
-      
-
-  stop() {
-    this.isStopped = true;
-    if (this.eventSource) {
-      this.eventSource.close();
-      this.eventSource = null;
-    }
-  }
-
-  // Method to manually reset and reconnect
-  reset() {
-    this.retryCount = 0;
-    this.isStopped = false;
-    this.stop();
-    this.connect();
-  }
-};
-
-// Usage example:
-const eventSourceOptions = {
-  maxRetries: 3,
-  eventListeners: {
-    message: (event) => console.log('Received message:', event.data),
-    customEvent: (event) => console.log('Custom event:', event.data)
-  }
-};
-
-//const source = new ManagedEventSource('/api/events', eventSourceOptions);
-//source.connect();
-
-// To stop the connection:
-// source.stop();
-
-// To reset and reconnect:
-// source.reset();
-
-
-
 // Chat interface class
 
 class ChatInterface {
@@ -277,7 +25,7 @@ class ChatInterface {
         this.currentMessage = [];
         this.currentItems = [];
         this.itemToRemember = [];
-        this.createInterface(mode);
+        this.bindInterfaceElements();
         this.bindEvents();
         this.eventSource = null;
         this.dotsStillThere = false;
@@ -288,125 +36,53 @@ class ChatInterface {
         }
     }
   
-    makeSelectorLabel(label) {
-      const labelDiv = document.createElement('span');
-      labelDiv.textContent = " "+ label + " ";
-      return labelDiv;
-    }
-
-    sites () {
-      return ['imdb', 'seriouseats', 'npr podcasts', 'backcountry', 'neurips', 'zillow',
-      'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'imdb2', 'all'];
-    }
-    createSelectors() {
-        // Create selectors
-      const selector = document.createElement('div');
-      this.selector = selector;
-      selector.className = 'site-selector';
-  
-      // Create site selector
-      const siteSelect = document.createElement('select');
-      this.siteSelect = siteSelect;
-      this.sites().forEach(site => {
-        const option = document.createElement('option');
-        option.value = site;
-        option.textContent = site;
-        siteSelect.appendChild(option);
-      });
-      this.selector.appendChild(this.makeSelectorLabel("Site"))
-      this.selector.appendChild(siteSelect);
-      siteSelect.addEventListener('change', () => {
-        this.messagesArea.innerHTML = '';
-        this.messages = [];
-        this.prevMessages = []
-      });
-  
-      // Create model selector
-      this.selector.appendChild(this.makeSelectorLabel("Model"))
-      const modelSelect = document.createElement('select');
-      this.modelSelect = modelSelect;
-      const models = ['gpt-4o-mini', 'gpt-4o', 'gemini-1.5-flash', 
-        'gemini-1.5-pro', 'gemini-2.0-flash-exp', 
-        'claude-3-5-sonnet-latest', 'claude-3-5-haiku-latest'];
-      models.forEach(model => {
-        const option = document.createElement('option');
-        option.value = model;
-        option.textContent = model;
-        modelSelect.appendChild(option);
-      });
-     
-      this.selector.appendChild(modelSelect);
-      modelSelect.addEventListener('change', () => {
-        this.messagesArea.innerHTML = '';
-        this.messages = [];
-        this.prevMessages = []
-      });
-  
-      // Create clear chat icon
-      const clearIcon = document.createElement('span');
-      clearIcon.innerHTML = '<img src="/html/clear.jpeg" width="16" height="16" style="vertical-align: middle; cursor: pointer; margin-left: 8px;">';
-      clearIcon.title = "Clear chat history";
-      clearIcon.addEventListener('click', () => {
-        this.messagesArea.innerHTML = '';
-        this.messages = [];
-        this.prevMessages = [];
-      });
-      this.selector.appendChild(clearIcon);
-
-      this.container.appendChild(this.selector);
-    }
-  
-    createInterface(mode="dropdown") {
+    bindInterfaceElements(){
       // Create main container
       this.container = document.getElementById('chat-container');
+      this.inputArea = document.getElementById('user-input');
+      this.inputArea.placeholder = 'What are you looking for ...';
+      this.messagesArea = document.getElementById('messages');
+      this.siteSelect = document.getElementById('site-select');
+      this.modelSelect = document.getElementById('model-select');
+      this.clearIcon = document.getElementById('clear-icon');
+    }
+  
+    clearHistory() {
+      this.messagesArea.innerHTML = '';
+      this.messages = [];
+      this.prevMessages = [];
+    }
 
-      if (mode == "dropdown") {
-        this.createSelectors();
-      }
-      // Create messages area
-      
-      this.messagesArea = document.createElement('div');
-      this.messagesArea.className = (mode == "dropdown" ? 'messages' : 'messages_full');
-      
-      // Create input area
-      this.inputArea = document.createElement('div');
-      this.inputArea.className = (mode == "dropdown" ? 'input-area' : 'input-area_full');
-  
-      // Create input field
-      this.input = document.createElement('textarea');
-      this.input.className = 'message-input';
-      this.input.placeholder = 'Type your message...';
-  
-      // Create send button
-      this.sendButton = document.createElement('button');
-      this.sendButton.className = 'send-button';
-      this.sendButton.textContent = 'Send';
-  
-      // Assemble the interface
-      this.inputArea.appendChild(this.input);
-      this.inputArea.appendChild(this.sendButton);
-      this.container.appendChild(this.messagesArea);
-      this.container.appendChild(this.inputArea);
-  
-      // Add to document
-     // document.body.appendChild(this.container);
-    }
-  
     bindEvents() {
-      // Send message on button click
-      this.sendButton.addEventListener('click', () => this.sendMessage());
-  
-      // Send message on Enter (but allow Shift+Enter for new lines)
-      this.input.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-          e.preventDefault();
+        // Send message on button click
+        this.sendButton = document.getElementById('send-button');
+        this.input = document.getElementById('message-input');
+
+        this.sendButton.addEventListener('click', () => this.sendMessage());    
+        // Send message on Enter (but allow Shift+Enter for new lines)
+        this.input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            this.currentQuery = this.input.value.trim();
+            this.sendMessage();
+          }
+        });
+
+        this.clearIcon.addEventListener('click', () => {
+          this.clearHistory();
+        });
+
+        this.siteSelect.addEventListener('change', () => {
+          this.clearHistory();
+        });
+
+        this.modelSelect.addEventListener('change', () => {
           this.sendMessage();
-        }
-      });
-    }
+        });
+      }
   
     sendMessage(query=null) {
-      const message = query || this.input.value.trim();
+      const message = query || this.currentQuery;
       if (!message) return;
   
       // Add user message
@@ -440,7 +116,6 @@ class ChatInterface {
     }
   
     addMessage(content, sender) {
-   
       const messageDiv = document.createElement('div');
       messageDiv.className = `message ${sender}-message`;
       if (sender == "user") {
@@ -671,11 +346,6 @@ class ChatInterface {
     }
   }
 
-  getAndProcessResponse(url) {
-    //  console.log("getAndProcessResponse", url);
-     
-    }
-  
     resortResults(chatInterface) {
       if (chatInterface.currentItems.length > 0) {
         chatInterface.currentItems.sort((a, b) => b[0].score - a[0].score);
