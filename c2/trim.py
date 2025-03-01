@@ -1,0 +1,83 @@
+import json
+
+def listify (item):
+    if not isinstance(item, list):
+        return [item]
+    else:
+        return item
+
+def trim_json(obj):
+    objType = obj["@type"] if "@type" in obj else ["Thing"]
+    if not isinstance(objType, list):
+        objType = [objType]
+    if (objType == ["Thing"]):
+        return obj
+    if ("Recipe" in objType):
+        return trim_recipe(obj)
+    if ("Movie" in objType or "TVSeries" in objType):
+        return trim_movie(obj)
+    return obj
+
+def trim_json_hard(obj):
+    objType = obj["@type"] if "@type" in obj else ["Thing"]
+    if not isinstance(objType, list):
+        objType = [objType]
+    if (objType == ["Thing"]):
+        return obj
+    if ("Recipe" in objType):
+        return trim_recipe_hard(obj)
+    if ("Movie" in objType or "TVSeries" in objType):
+        return trim_movie_hard(obj)
+   
+
+def trim_recipe(obj):
+    items = collateObjAttr(obj)
+    js = {}
+    skipAttrs = ["mainEntityOfPage", "publisher", "image", "datePublished", "dateModified", 
+                 "author"]
+    for attr in items.keys():
+        if (attr in skipAttrs):
+            continue
+        js[attr] = items[attr]
+    return js
+
+def trim_recipe_hard(obj):
+    items = collateObjAttr(obj)
+    js = {}
+    skipAttrs = ["mainEntityOfPage", "publisher", "image", "datePublished", "dateModified", "review",
+                 "author", "recipeYield", "recipeInstructions", "nutrition"]
+    for attr in items.keys():
+        if (attr in skipAttrs):
+            continue
+        js[attr] = items[attr]
+    return js
+
+def trim_movie(obj):
+    items = collateObjAttr(obj)
+    js = {}
+    skipAttrs = ["mainEntityOfPage", "publisher", "image", "datePublished", "dateModified", "author", "trailer"]
+    for attr in items.keys():
+        if (attr in skipAttrs):
+            continue
+        elif (attr == "actor" or attr == "director" or attr == "creator"):
+            if ("name" in items[attr]):
+                if (attr not in js):
+                    js[attr] = []
+                js[attr].append(items[attr]["name"])
+        elif (attr == "review"):
+            items['review'] = []
+            for review in items['review']:
+                if ("reviewBody" in review):    
+                    js[attr].append(review["reviewBody"])
+        else:
+            js[attr] = items[attr]
+    return js
+
+def collateObjAttr(obj):
+    items = {}
+    for attr in obj.keys():
+        if (attr in items):
+            items[attr].append(obj[attr])
+        else:
+            items[attr] = [obj[attr]]
+    return items
