@@ -5,7 +5,7 @@ import asyncio
 from urllib.parse import parse_qs, urlparse
 from datetime import datetime
 import traceback
-from utils import siteToClass
+from utils import requestToHandlerClass
 import ssl
 
 
@@ -45,7 +45,6 @@ class HandleRequest():
                     print(f"[{request_id}] Connection lost before starting query handling")
                     return
                     
-                handlerClass = siteToClass(site)
                 await self.handle_query(site[0] if isinstance(site, list) else site,
                                        query[0] if isinstance(query, list) else query,
                                        prev[0] if isinstance(prev, list) else prev,
@@ -97,7 +96,7 @@ class HandleRequest():
         print(f"[{request_id}] Starting query handling for site: {site}, query_id: {query_id}")
         
         try:
-            handlerClass = siteToClass(site)
+            handlerClass = requestToHandlerClass(self)
             print(f"[{request_id}] Created handler instance: {handlerClass.__name__}")
             
             handler = handlerClass(site, query, prev, model, http_handler=self, query_id=query_id, context_url=context_url)

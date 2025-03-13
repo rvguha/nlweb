@@ -28,11 +28,15 @@ def siteToItemType(site):
     else:
         return "Items"
     
-def siteToClass(site):
+def requestToHandlerClass(request):
+   
+    site = request.query_params.get('site', ['imdb'])
+    context_url = request.query_params.get('context_url', '')
     item_type = siteToItemType(site)
+
     if site == "imdb":
         return GraphStructureHandler
-    elif site == "bc_product":
+    elif context_url != '':
         return ContextSensitiveHandler
     elif site == "zillow":
         return LocationSensitiveHandler

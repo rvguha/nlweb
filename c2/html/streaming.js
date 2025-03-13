@@ -209,6 +209,9 @@ class ManagedEventSource {
       } else if (data && data.message_type == "intermediate_message") {
         this.chatInterface.bubble.appendChild(this.chatInterface.createIntermediateMessageHtml(data.message));
       } else if (data && data.message_type == "nlws") {
+        while (this.chatInterface.bubble.firstChild) {
+          this.chatInterface.bubble.removeChild(this.chatInterface.bubble.firstChild);
+        }
         this.chatInterface.itemDetailsMessage(data.answer, this.chatInterface);
         for (const item of data.items) {
           const domItem = this.chatInterface.createJsonItemHtml(item)

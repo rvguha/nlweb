@@ -1,8 +1,6 @@
-const mltyles = `
+const styles = `
   .chat-container {
-   /* max-width: 800px; */
-   height: 80%;
-    width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     font-family: sans-serif;
@@ -20,7 +18,7 @@ const mltyles = `
   }
   
   .messages {
-    height: 500px; 
+    height: 500px;
     overflow-y: auto;
     border: 1px solid #ccc;
     padding: 20px;
@@ -109,15 +107,13 @@ const mltyles = `
 
 // Add styles to document
 const styleSheet = document.createElement("style");
-styleSheet.textContent = mltyles;
+styleSheet.textContent = styles;
 document.head.appendChild(styleSheet);
 
 // Chat interface class
 
-
-
 class ChatInterface {
-    constructor(site="all", model="gpt-4o") {
+    constructor(site=null, model=null) {
         if (site) {
             this.site = site;
         }
@@ -142,17 +138,77 @@ class ChatInterface {
       return labelDiv;
     }
 
-    clearHistory() {
-      this.messagesArea.innerHTML = '';
+    sites () {
+      return ['imdb', 'seriouseats', 'npr podcasts', 'backcountry', 'neurips', 'zillow',
+      'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'all'];
+    }
+    createSelectors() {
+      console.log("createSelectors");
+        // Create selectors
+      const selector = document.createElement('div');
+      this.selector = selector;
+      selector.className = 'site-selector';
+  
+      // Create site selector
+      const siteSelect = document.createElement('select');
+      this.siteSelect = siteSelect;
+      this.sites().forEach(site => {
+        const option = document.createElement('option');
+        option.value = site;
+        option.textContent = site;
+        siteSelect.appendChild(option);
+      });
+      this.selector.appendChild(this.makeSelectorLabel("Site"))
+      this.selector.appendChild(siteSelect);
+      siteSelect.addEventListener('change', () => {
+        this.messagesArea.innerHTML = '';
+        this.messages = [];
+        this.prevMessages = []
+      });
+  
+      // Create model selector
+      this.selector.appendChild(this.makeSelectorLabel("Model"))
+      const modelSelect = document.createElement('select');
+      this.modelSelect = modelSelect;
+      const models = ['gpt-4o-mini', 'gpt-4o', 'gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-2.0-flash-exp'];
+      models.forEach(model => {
+        const option = document.createElement('option');
+        option.value = model;
+        option.textContent = model;
+        modelSelect.appendChild(option);
+      });
+     
+      this.selector.appendChild(modelSelect);
+      modelSelect.addEventListener('change', () => {
+        this.messagesArea.innerHTML = '';
+        this.messages = [];
+        this.prevMessages = []
+      });
+  
+      this.container.appendChild(this.selector);
+
+      console.log("creating clear icon");
+      // Create clear chat icon
+      const clearIcon = document.createElement('span');
+      clearIcon.innerHTML = '<img src="/html/clear.jpeg" width="16" height="16" style="vertical-align: middle; cursor: pointer; margin-left: 8px;">';
+      clearIcon.title = "Clear chat history";
+      clearIcon.addEventListener('click', () => {
+        this.messagesArea.innerHTML = '';
         this.messages = [];
         this.prevMessages = [];
-     
+      });
+      this.selector.appendChild(clearIcon);
+
     }
-    
+  
     createInterface() {
       // Create main container
       this.container = document.getElementById('chat-container');
 
+  
+      if (!this.site || !this.model) {
+        this.createSelectors();
+      }
       // Create messages area
       this.messagesArea = document.createElement('div');
       this.messagesArea.className = 'messages';
@@ -229,6 +285,7 @@ class ChatInterface {
     }
   
     addMessage(content, sender) {
+   
       const messageDiv = document.createElement('div');
       messageDiv.className = `message ${sender}-message`;
       if (sender == "user") {
@@ -296,6 +353,15 @@ class ChatInterface {
       }
     }
   
+    getItemName(item) {
+      if (item.name) {
+        return item.name;
+      } else if (item.schema_object && item.schema_object.keywords) {
+        return item.schema_object.keywords;
+      }
+      return item.url;
+    }
+
     createJsonItemHtml(item) {
       const container = document.createElement('div');
       container.style.display = 'flex';
@@ -316,7 +382,8 @@ class ChatInterface {
       // Title/link
       const titleLink = document.createElement('a');
       titleLink.href = item.url;
-      titleLink.textContent = this.htmlUnescape(`${item.name}`);
+      const itemName = this.getItemName(item);
+      titleLink.textContent = this.htmlUnescape(`${itemName}`);
       titleLink.style.fontWeight = '600';
       titleLink.style.textDecoration = 'none';
       titleLink.style.color = '#2962ff';
@@ -342,19 +409,6 @@ class ChatInterface {
       description.textContent = item.description;
       description.style.fontSize = '0.9em';
       contentDiv.appendChild(description);
-
-      // visible url
-      const visibleUrl = document.createElement('div');
-      const visibleUrlLink = document.createElement('a');
-      visibleUrlLink.href = item.siteUrl;
-      visibleUrlLink.textContent = item.site;
-      visibleUrlLink.style.fontSize = '0.9em';
-      visibleUrlLink.style.textDecoration = 'none';
-      visibleUrlLink.style.color = '#2962ff';
-      visibleUrlLink.style.fontWeight = '500';
-      visibleUrlLink.style.padding = '8px 0';
-      visibleUrlLink.style.display = 'inline-block';
-      contentDiv.appendChild(visibleUrlLink);
 
       this.typeSpecificContent(item, contentDiv);
 
@@ -480,52 +534,40 @@ class ChatInterface {
             const domItem = chatInterface.createJsonItemHtml(item)
             chatInterface.currentItems.push([item, domItem])
             chatInterface.bubble.appendChild(domItem);
+            chatInterface.num_results_sent++;
           }
+          chatInterface.resortResults(chatInterface);
         } else if (data && data.message_type == "intermediate_message") {
           chatInterface.bubble.appendChild(chatInterface.createIntermediateMessageHtml(data.message));
         } else if (data && data.message_type == "complete") {
           // Sort currentItems by score in descending order
-          if (chatInterface.currentItems.length > 0) {
-            chatInterface.currentItems = chatInterface.finalItemSort(chatInterface.currentItems)
-            
-          // Clear existing children
-            while (chatInterface.bubble.firstChild) {
-              chatInterface.bubble.removeChild(chatInterface.bubble.firstChild);
-            }
-            if (chatInterface.thisRoundRemembered) {
-              chatInterface.bubble.appendChild(chatInterface.thisRoundRemembered)
-            }
-            // Add sorted domItems back to bubble
-            for (const [item, domItem] of chatInterface.currentItems) {
-              chatInterface.bubble.appendChild(domItem);
-            }
-          }
+          chatInterface.resortResults(chatInterface);
           chatInterface.scrollDiv.scrollIntoView();
           this.close();
         }
       }
     }
 
-    finalItemSort (items, n=0) {
-      items.sort((a, b) => b[0].score - a[0].score);
-      const remainingItems = []
-      const seen = []
-    
-      for (const item of items) {
-        if (seen.indexOf(item[0].site) != -1) {
-          remainingItems.push(item)
-          items = items.filter(i => i !== item)
-        } else {
-          seen.push(item[0].site)
+    resortResults(chatInterface) {
+      if (chatInterface.currentItems.length > 0) {
+        chatInterface.currentItems.sort((a, b) => b[0].score - a[0].score);
+
+        console.log("resorting");
+        
+      // Clear existing children
+        while (chatInterface.bubble.firstChild) {
+          chatInterface.bubble.removeChild(chatInterface.bubble.firstChild);
+        }
+        if (chatInterface.thisRoundRemembered) {
+          chatInterface.bubble.appendChild(chatInterface.thisRoundRemembered)
+        }
+        // Add sorted domItems back to bubble
+        for (const [item, domItem] of chatInterface.currentItems) {
+          chatInterface.bubble.appendChild(domItem);
         }
       }
-      
-      for (const item of remainingItems) {
-        items.push(item)
-      }
-      return items
     }
-  
+      
     createInsufficientResultsHtml() {
       const container = document.createElement('div');
       container.className = 'intermediate-container';
@@ -556,10 +598,10 @@ class ChatInterface {
         const prev = encodeURIComponent(JSON.stringify(this.prevMessages));
         const host = "http://localhost:8000";
         const remoteHost = "http://74.179.100.160:8000";
-        const queryString = `query=${encodeURIComponent(message)}&prev=${prev}&site=all&model=gpt-4o-mini`;
+        const queryString = `query=${encodeURIComponent(message)}&site=${encodeURIComponent(selectedSite)}&model=${encodeURIComponent(selectedModel)}&prev=${prev}&item_to_remember=${encodeURIComponent(this.itemToRemember)}`;
        // const url = `${remoteHost}/?${queryString}`;
-       //   const url = `${host}/?${queryString}`;
-       const url = `/?${queryString}`;
+       // const url = `${host}/?${queryString}`;
+        const url = `/?${queryString}`;
         console.log("url", url);
         this.getAndProcessResponse(url);
         this.prevMessages.push(message);

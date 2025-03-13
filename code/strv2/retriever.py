@@ -9,6 +9,10 @@ def search_db(query, site, num_results=50):
     client = milvus_client_prod 
     if (site == "imdb2"):
         site = "imdb"
+    if (site == "bc_product"):
+        site = "backcountry"
+    if (site == "npr podcasts"):
+        site = ["npr podcasts", "med podcast"]
     if (site == "all"):
         res = client.search(
             collection_name="prod_collection",
@@ -40,3 +44,18 @@ def search_db(query, site, num_results=50):
         retval.append([ent["url"], ent["text"], ent["name"], ent["site"]])
     print(f"Retrieved {len(retval)} items")
     return retval
+
+def retrieve_item_with_url(url):
+    client = milvus_client_prod 
+    print(f"Querying for '{url}'")
+    res = client.query(
+        collection_name="prod_collection",
+    #    data=[embedding],
+        filter=f"url == '{url}'",
+        limit=1,
+        output_fields=["url", "text", "name", "site"],
+    )
+  #  print(f"Retrieved {res}")
+    if (len(res) == 0):
+        return None
+    return res[0]

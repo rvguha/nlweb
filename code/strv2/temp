@@ -1,0 +1,50 @@
+# server.py
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import json
+import time
+from datetime import datetime
+
+class StreamingHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == '/stream':
+            self._handle_stream()
+        else:
+            self.send_error(404)
+
+
+    def _handle_stream(self):
+        """Handle the SSE stream"""
+        self.send_response(200)
+        self.send_header('Content-type', 'text/event-stream')
+        self.send_header('Cache-Control', 'no-cache')
+        self.send_header('Connection', 'keep-alive')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        
+        try:
+            message_count = 0
+            while True:
+                message = {
+                    'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    'value': f'Update {message_count}'
+                }
+                
+                data = f"data: {json.dumps(message)}\n\n"
+                self.wfile.write(data.encode())
+                self.wfile.flush()
+                
+                message_count += 1
+                time.sleep(1)  # Send update every second
+                
+        except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
+            print("Client disconnected")
+            return
+
+def run_server(port=8000):
+    server_address = ('', port)
+    httpd = HTTPServer(server_address, StreamingHandler)
+    print(f"Server running on http://localhost:{port}")
+    httpd.serve_forever()
+
+if __name__ == '__main__':
+    run_server()

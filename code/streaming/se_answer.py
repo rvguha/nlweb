@@ -114,6 +114,7 @@ async def ask_llm(prompt, model, response_format):
             ],
             response_format=response_format,
         )
+    print(f"Finished asking llm: {completion.choices[0].message.parsed}")
     return completion.choices[0].message.parsed
 
 async def execute_task_set (task_set):

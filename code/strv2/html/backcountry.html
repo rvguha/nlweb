@@ -56,7 +56,7 @@
     // Get product cards
     let parsedContent;
     const host = "http://74.179.100.160:8000";
-    const url = `/?query=${encodeURIComponent(message)}&site=backcountry&num=12&prev=${encodeURIComponent(this.prevMessages.join(','))}`;
+    const url = `/?query=${encodeURIComponent(message)}&site=backcountry&num=16&model=gpt-4o&prev=${encodeURIComponent(this.prevMessages.join(','))}`;
    // const url = `http://74.179.100.160:8080/?query=${encodeURIComponent(message)}&site=backcountry&num=12&prev=${encodeURIComponent(this.prevMessages.join(','))}`;
    
     this.getAndProcessResponse(url);

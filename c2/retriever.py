@@ -1,7 +1,10 @@
 from pymilvus import MilvusClient
 import mllm
-milvus_client_prod = MilvusClient("../milvus/milvus_prod.db")
 
+def initialize():
+    global milvus_client_prod
+    milvus_client_prod = MilvusClient("../milvus/milvus_prod.db")
+    search_db("test", "all", 10)
 
 def search_db(query, site, num_results=50):
     print(f"query: {query}, site: {site}")

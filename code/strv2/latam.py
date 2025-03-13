@@ -13,7 +13,7 @@ class LatamHandler(RecipeHandler):
      {"is_dietary_restriction" : "True or False", "dietary_restriction" : "The dietary restriction, if any"}]
 
 
-    def __init__(self, site, query, prev_queries=[], model="gpt-4o-mini", http_handler=None, query_id=None):
+    def __init__(self, site, query, prev_queries=[], model="gpt-4o-mini", http_handler=None, query_id=None, context_url=None):
         super().__init__(site, query, prev_queries, model, http_handler, query_id)
        # self.firstQueryResponse()
 

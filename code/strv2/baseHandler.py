@@ -21,18 +21,17 @@ class BaseNLWebHandler :
                                     {"decontextualized_query" : "The rewritten query"}]
     
     
-    RANKING_PROMPT = ["""Assign a score between 0 and 100 to the following recipe
-based on how relevant it is to the user's question. 
-Provide a short description of the itemrecipe that is relevant to the user's question, without mentioning the user's question.
-The description should highlight aspects of the recipe the user is looking for. If the recipe is not for the dish that the user is looking for, specify, in the description, how this recipe might be useful in preparing what the user is trying to cook. 
+    RANKING_PROMPT = ["""Assign a score between 0 and 100 to the following {self.item_type}
+based on how relevant it is to the user's question. Use your knowledge from other sources, about the item, to make a judgement.
+Provide a short description of the item that is relevant to the user's question, without mentioning the user's question.
+Provide an explanation of the relevance of the item to the user's question, without mentioning the user's question or the score or explicitly mentioning the term relevance.
+If the score is below 75, in the description, include the reason why it is still relevant.
 The user's question is: {self.decontextualized_query}.
-The item is: {description}.
-""" , 
-{"score" : "integer between 0 and 100", 
+The item is: {description}.""" , {"score" : "integer between 0 and 100", 
  "description" : "short description of the item", 
  "explanation" : "explanation of the relevance of the item to the user's question"}]
 
-    def __init__(self, site, query, prev_queries=[], model="gpt-4o-mini", http_handler=None, query_id=None):
+    def __init__(self, site, query, prev_queries=[], model="gpt-4o-mini", http_handler=None, query_id=None, context_url=None):
         self.site = site
         self.query = query
         self.prev_queries = prev_queries
@@ -50,9 +49,7 @@ The item is: {description}.
         # This will replace all {self.xxx} with the actual instance variable values
         return self.format_string.format(self=self)
     
-    def firstQueryResponse(self):
-        return
-
+   
     def simpleItemType(self):
         self.item_type = utils.siteToItemType(self.site)
 
@@ -121,7 +118,6 @@ The item is: {description}.
             
         if (self.streaming):
             try:
-                print(f"sending {len(json_results)} results")
                 to_send = {"message_type": "result_batch", "results": json_results, "query_id": self.query_id}
                 await self.http_handler.write_stream(to_send)
                 self.num_results_sent += len(json_results)
@@ -146,10 +142,6 @@ The item is: {description}.
             message = {"message_type": "remember", "item_to_remember": 
                        self.query, "message": "Asking " + top_sites_str}
             await self.http_handler.write_stream(message)
-    #    sites = set([x[3] for x in top_embeddings])
-    #    for site in sites:
-    #        message = {"message_type": "site_being_asked", "site": site}
-    #        await self.http_handler.write_stream(message)
         self.sites_in_embeddings_sent = True
 
     
@@ -171,8 +163,7 @@ The item is: {description}.
         if (self.num_results_sent > NUM_RESULTS_TO_SEND):
             print("returning without looking at remaining results")
             return
-   #     print(f"results: {results}")
-        # Sort by score in descending order
+   
         sorted_results = sorted(results, key=lambda x: x['ranking']["score"], reverse=True)
         good_results = [x for x in sorted_results if x['ranking']["score"] > 51]
         medium_results = [x for x in sorted_results if x['ranking']["score"] > 35 and x['ranking']["score"] < 51]

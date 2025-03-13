@@ -4,6 +4,7 @@ import urllib.parse
 import os
 import sys
 import time
+import retriever
 from StreamingWrapper import HandleRequest
 
 
@@ -215,7 +216,7 @@ async def start_server(host='0.0.0.0', port=8000, fulfill_request=None, use_http
     protocol = "HTTPS" if use_https else "HTTP"
     url_protocol = "https" if use_https else "http"
     print(f'Serving {protocol} on {addr[0]} port {addr[1]} ({url_protocol}://{addr[0]}:{addr[1]}/) ...')
-    
+    retriever.initialize()
     async with server:
         await server.serve_forever()
 

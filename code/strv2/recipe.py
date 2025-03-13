@@ -25,7 +25,7 @@ The item is: {description}.""",
  "explanation" : "explanation of the relevance of the recipe to the user's question"}
 ]
 
-    def __init__(self, site, query, prev_queries=[], model="gpt-4o-mini", http_handler=None, query_id=None):
+    def __init__(self, site, query, prev_queries=[], model="gpt-4o-mini", http_handler=None, query_id=None, context_url=None):
         super().__init__(site, query, prev_queries, model, http_handler, query_id)
        # self.firstQueryResponse()
 

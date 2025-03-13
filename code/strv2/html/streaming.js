@@ -63,11 +63,13 @@ const styles = `
     margin-bottom: 1em;
   }
 
-  .item-detail-message {
-    font-size: 0.9em;
+  .item-details-message {
+    font-size: 0.95em; 
     color: #333333;
     justify-content: flex-start;
-   / margin-bottom: 0.5em;
+    margin-bottom: 2em;
+    display: flex;
+    font-family: sans-serif;
   }
   
   .message-bubble {
@@ -193,7 +195,9 @@ class ManagedEventSource {
           this.chatInterface.memoryMessage(data.item_to_remember, this.chatInterface)
         }
       } else if (data && data.message_type == "remember") {
-        this.chatInterface.memoryMessage(data.message, this.chatInterface)          
+        this.chatInterface.memoryMessage(data.message, this.chatInterface)    
+      } else if (data && data.message_type == "item_details") {
+        this.chatInterface.itemDetailsMessage(data.message, this.chatInterface)    
       } else if (data && data.message_type == "result_batch") {
         for (const item of data.results) {
           const domItem = this.chatInterface.createJsonItemHtml(item)
@@ -266,7 +270,7 @@ class ChatInterface {
         const query = urlParams.get('query');
         const urlModel = urlParams.get('model');
         const prevMessagesStr = urlParams.get('prev');
-        
+        const contextUrl = urlParams.get('context_url');
         if (urlModel) {
             this.model = urlModel;
         }
@@ -295,8 +299,8 @@ class ChatInterface {
     }
 
     sites () {
-      return ['imdb', 'seriouseats', 'npr podcasts', 'backcountry', 'neurips', 'zillow',
-      'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'imdb2', 'all'];
+      return ['imdb', 'seriouseats', 'npr podcasts', 'backcountry', 'bc_product', 'neurips', 'zillow',
+      'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'med podcast', 'all'];
     }
     createSelectors() {
         // Create selectors
@@ -319,7 +323,21 @@ class ChatInterface {
         this.messagesArea.innerHTML = '';
         this.messages = [];
         this.prevMessages = []
+        if (this.siteSelect.value == "bc_product") {
+          const contextUrlDiv = document.getElementById('context_url_div');
+          if (contextUrlDiv) {
+            contextUrlDiv.style.display = 'block';
+          }
+        } else {
+          const contextUrlDiv = document.getElementById('context_url_div');
+          if (contextUrlDiv) {
+            contextUrlDiv.style.display = 'none';
+          }
+        }
       });
+
+     
+          
   
       // Create model selector
       this.selector.appendChild(this.makeSelectorLabel("Model"))
@@ -340,6 +358,7 @@ class ChatInterface {
         this.messagesArea.innerHTML = '';
         this.messages = [];
         this.prevMessages = []
+
       });
   
       // Create clear chat icon
@@ -352,6 +371,39 @@ class ChatInterface {
         this.prevMessages = [];
       });
       this.selector.appendChild(clearIcon);
+
+      // Create debug icon
+      const debugIcon = document.createElement('span');
+      debugIcon.innerHTML = '<img src="/html/debug.png" width="16" height="16" style="vertical-align: middle; cursor: pointer; margin-left: 8px;">';
+      debugIcon.title = "Debug";
+      debugIcon.addEventListener('click', () => {
+        if (this.debug_mode) {
+          this.debug_mode = false;
+          console.log("resortResults");
+          this.bubble.innerHTML = '';
+          this.resortResults(this);
+        } else {
+          this.debug_mode = true;
+          this.bubble.innerHTML = this.createDebugString();
+        }
+      });
+      this.selector.appendChild(debugIcon);
+
+      const contextUrlDiv = document.createElement('div');
+      contextUrlDiv.id = 'context_url_div';
+      contextUrlDiv.style.display = 'none';
+      contextUrlDiv.style.marginTop = '8px';
+          
+      const contextUrlInput = document.createElement('input');
+      contextUrlInput.type = 'text';
+      contextUrlInput.id = 'context_url';
+      contextUrlInput.placeholder = 'Enter Context URL';
+      contextUrlInput.style.width = '200px';
+          
+      contextUrlDiv.appendChild(this.makeSelectorLabel("Context URL"));
+      contextUrlDiv.appendChild(contextUrlInput);
+      this.selector.appendChild(contextUrlDiv);
+      this.context_url = contextUrlInput;
 
       this.container.appendChild(this.selector);
     }
@@ -440,7 +492,6 @@ class ChatInterface {
     }
   
     addMessage(content, sender) {
-   
       const messageDiv = document.createElement('div');
       messageDiv.className = `message ${sender}-message`;
       if (sender == "user") {
@@ -478,17 +529,36 @@ class ChatInterface {
       this.currentMessage = "";
     }
 
-    makeAsDiv(content) {
-      const div = document.createElement('div');
-      div.className = 'item-detail-message';
-      div.textContent = content;
-      return div;
+    makeAsSpan(content) {
+      const span = document.createElement('span');
+      span.textContent = content;
+      span.style.fontSize = '0.85em';
+     // span.className = 'item-details-message';
+      return span;
+    }
+
+    possiblyAddExplanation(item, contentDiv, force=false) {
+        const detailsDiv = document.createElement('div'); 
+        contentDiv.appendChild(document.createElement('br'));
+        const expl_span = this.makeAsSpan(item.explanation);
+        expl_span.className = 'item-details-message';
+        detailsDiv.appendChild(expl_span);
+        contentDiv.appendChild(detailsDiv);
+        return detailsDiv;
     }
 
     typeSpecificContent(item, contentDiv) {
       const houseTypes = ["SingleFamilyResidence", "Apartment", "Townhouse", "House", "Condominium", "RealEstateListing"]
-    //  console.log(item.schema_object['@type'])
-      if (item.schema_object && houseTypes.includes(item.schema_object['@type'])) {
+      if (!item.schema_object) {
+        return;
+      }
+      const objType = item.schema_object['@type'];
+      if (objType == "PodcastEpisode") {
+        this.possiblyAddExplanation(item, contentDiv, true);
+        return;
+      }
+      if (houseTypes.includes(objType)) {
+        const detailsDiv = this.possiblyAddExplanation(item, contentDiv, true);
         const price = item.schema_object.price;
         const address = item.schema_object.address;
         const numBedrooms = item.schema_object.numberOfRooms;
@@ -500,11 +570,14 @@ class ChatInterface {
           priceValue = Math.round(priceValue / 100000) * 100000;
           priceValue = priceValue.toLocaleString('en-US');
         }
-        contentDiv.appendChild(document.createElement('br'));
-        contentDiv.appendChild(this.makeAsDiv(address.streetAddress + ", " + address.addressLocality))
-        contentDiv.appendChild(this.makeAsDiv(`${numBedrooms} bedrooms, ${numBathrooms} bathrooms, ${sqft} sqft`))
-        contentDiv.appendChild(this.makeAsDiv(`Listed at ${priceValue}`))
-        
+
+        detailsDiv.appendChild(this.makeAsSpan(address.streetAddress + ", " + address.addressLocality))
+        detailsDiv.appendChild(document.createElement('br'));
+        detailsDiv.appendChild(this.makeAsSpan(`${numBedrooms} bedrooms, ${numBathrooms} bathrooms, ${sqft} sqft`))
+        detailsDiv.appendChild(document.createElement('br'));
+        if (priceValue) {
+          detailsDiv.appendChild(this.makeAsSpan(`Listed at ${priceValue}`))
+        }
       }
     }
 
@@ -524,7 +597,6 @@ class ChatInterface {
     }
 
     createJsonItemHtml(item) {
-    //  console.log("createJsonItemHtml", item);
       const container = document.createElement('div');
       container.style.display = 'flex';
       container.style.marginBottom = '1em';
@@ -586,7 +658,6 @@ class ChatInterface {
           visibleUrlLink.style.display = "inline-block";
           contentDiv.appendChild(visibleUrlLink);
       }
-
       this.typeSpecificContent(item, contentDiv);
 
       // Feedback icons
@@ -655,12 +726,10 @@ class ChatInterface {
     const container = document.createElement('div');
     container.className = 'intermediate-container';
     container.textContent = message;
-    console.log("createIntermediateMessageHtml", message);
     return container;
   }
 
   memoryMessage(itemToRemember, chatInterface) { 
-   // console.log("memoryMessage", itemToRemember);
     if (itemToRemember) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `remember-message`;
@@ -671,10 +740,16 @@ class ChatInterface {
     }
   }
 
-  getAndProcessResponse(url) {
-    //  console.log("getAndProcessResponse", url);
-     
-    }
+  itemDetailsMessage(itemDetails, chatInterface) { 
+     if (itemDetails) {
+         const messageDiv = document.createElement('div');
+         messageDiv.className = `item-details-message`;
+         messageDiv.textContent = itemDetails;
+         chatInterface.thisRoundRemembered = messageDiv;
+         chatInterface.bubble.appendChild(messageDiv);
+         return messageDiv;
+     }
+   }
   
     resortResults(chatInterface) {
       if (chatInterface.currentItems.length > 0) {
@@ -692,6 +767,8 @@ class ChatInterface {
         }
       }
     }
+
+
     createInsufficientResultsHtml() {
       const container = document.createElement('div');
       container.className = 'intermediate-container';
@@ -720,12 +797,13 @@ class ChatInterface {
         const selectedSite = (this.site ||this.siteSelect.value);
         const selectedModel = (this.model || this.modelSelect.value);
         const prev = encodeURIComponent(JSON.stringify(this.prevMessages));
+        const context_url = this.context_url && this.context_url.value ? this.context_url.value : '';
         const host = "http://localhost:8000";
       //  const remoteHost = "http://74.179.100.160:8000";
-        const queryString = `query=${encodeURIComponent(message)}&site=${encodeURIComponent(selectedSite)}&model=${encodeURIComponent(selectedModel)}&prev=${prev}&item_to_remember=${encodeURIComponent(this.itemToRemember)}`;
+        const queryString = `query=${encodeURIComponent(message)}&site=${encodeURIComponent(selectedSite)}&model=${encodeURIComponent(selectedModel)}&prev=${prev}&item_to_remember=${encodeURIComponent(this.itemToRemember)}&context_url=${encodeURIComponent(context_url)} `;
        // const url = `${remoteHost}/?${queryString}`;
         const url = `/?${queryString}`;
-       // console.log("url", url);
+        console.log("url", url);
         this.eventSource = new ManagedEventSource(url);
         this.eventSource.connect(this);
         this.prevMessages.push(message);
@@ -734,5 +812,98 @@ class ChatInterface {
         console.error('Error fetching response:', error);
       }
     }
+
+    createDebugString() {
+      return jsonLdToHtml(this.currentItems);
+    }
   }
+
+    function jsonLdToHtml(jsonLd) {
+      // Helper function to escape HTML special characters
+      const escapeHtml = (str) => {
+          return str
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#039;');
+      };
+  
+      // Helper function to format a single value
+      const formatValue = (value, indent) => {
+          const spaces = '  '.repeat(indent);
+          
+          if (value === null) {
+              return `<span class="null">null</span>`;
+          }
+          
+          switch (typeof value) {
+              case 'string':
+                  // Special handling for URLs and IRIs in JSON-LD
+                  if (value.startsWith('http://') || value.startsWith('https://')) {
+                      return `<span class="string url">"${escapeHtml(value)}"</span>`;
+                  }
+                  return `<span class="string">"${escapeHtml(value)}"</span>`;
+              case 'number':
+                  return `<span class="number">${value}</span>`;
+              case 'boolean':
+                  return `<span class="boolean">${value}</span>`;
+              case 'object':
+                  if (Array.isArray(value)) {
+                      if (value.length === 0) return '[]';
+                      const items = value.map(item => 
+                          `${spaces}  ${formatValue(item, indent + 1)}`
+                      ).join(',\n');
+                      return `[\n${items}\n${spaces}]`;
+                  }
+                  return formatObject(value, indent);
+          }
+      };
+  
+      // Helper function to format an object
+      const formatObject = (obj, indent = 0) => {
+          const spaces = '  '.repeat(indent);
+          
+          if (Object.keys(obj).length === 0) return '{}';
+          
+          const entries = Object.entries(obj).map(([key, value]) => {
+              // Special handling for JSON-LD keywords (starting with @)
+              const keySpan = key.startsWith('@') 
+                  ? `<span class="keyword">"${escapeHtml(key)}"</span>`
+                  : `<span class="key">"${escapeHtml(key)}"</span>`;
+                  
+              return `${spaces}  ${keySpan}: ${formatValue(value, indent + 1)}`;
+          });
+          
+          return `{\n${entries.join(',\n')}\n${spaces}}`;
+      };
+  
+      // Main formatting logic
+      try {
+          const parsed = (typeof jsonLd === 'string') ? JSON.parse(jsonLd) : jsonLd;
+          const formatted = formatObject(parsed);
+          
+          // Return complete HTML with styling
+          return `<pre class="json-ld"><code>${formatted}</code></pre>
+  <style>
+  .json-ld {
+      background-color: #f5f5f5;
+      padding: 1em;
+      border-radius: 4px;
+      font-family: monospace;
+      line-height: 1.5;
+  }
+  .json-ld .keyword { color: #e91e63; }
+  .json-ld .key { color: #2196f3; }
+  .json-ld .string { color: #4caf50; }
+  .json-ld .string.url { color: #9c27b0; }
+  .json-ld .number { color: #ff5722; }
+  .json-ld .boolean { color: #ff9800; }
+  .json-ld .null { color: #795548; }
+  </style>`;
+      } catch (error) {
+          return `<pre class="json-ld error">Error: ${error.message}</pre>`;
+      }
+  }
+  
   

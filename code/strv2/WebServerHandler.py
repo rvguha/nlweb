@@ -17,7 +17,8 @@ import utils
 from recipe import RecipeHandler
 from latam import LatamHandler
 from imdb2 import Imdb2Handler
-import retriever
+from zillow import ZillowHandler        
+from backcountry_product import BCProductHandler
 
 # Configure logging
 def setup_logging():
@@ -79,9 +80,15 @@ class StreamingHandler(SimpleHTTPRequestHandler):
     def siteToClass(self, site):
         self.logger.debug(f"Converting site '{site}' to handler class")
         item_type = utils.siteToItemType(site)
-        if site == "imdb2":
+        if site == "imdb2" or site == "imdb":
             self.logger.debug("Selected ImdbHandler for imdb")
             return Imdb2Handler
+        elif site == "bc_product":
+            self.logger.debug("Selected BCProductHandler for backcountry")
+            return BCProductHandler
+        elif site == "zillow":
+            self.logger.debug("Selected ZillowHandler for zillow")
+            return ZillowHandler
         elif site == "latam_recipes":
             self.logger.debug("Selected LatamHandler for latam_recipes")
             return LatamHandler
@@ -124,7 +131,7 @@ class StreamingHandler(SimpleHTTPRequestHandler):
             prev = params.get('prev', [''])[0]
             num = params.get('num', ['10'])[0]
             query_id = params.get('query_id', [''])[0]
-
+            context_url = params.get('context_url', [''])[0]
             self.logger.debug(f"[{request_id}] Starting SSE response")
             self._start_sse_response()
             
@@ -137,7 +144,7 @@ class StreamingHandler(SimpleHTTPRequestHandler):
                 handlerClass = self.siteToClass(site)
                 self.logger.info(f"[{request_id}] Processing query with handler: {handlerClass.__name__}")
                 loop.run_until_complete(
-                    self.handle_query(site, query, prev, model, query_id)
+                    self.handle_query(site, query, prev, model, query_id, context_url)
                 )
             finally:
                 self.logger.debug(f"[{request_id}] Closing event loop")
@@ -171,7 +178,7 @@ class StreamingHandler(SimpleHTTPRequestHandler):
                     pass
                 return
     
-    async def handle_query(self, site, query, prev, model, query_id):
+    async def handle_query(self, site, query, prev, model, query_id, context_url):
         request_id = f"query_{int(time.time()*1000)}"
         self.logger.info(f"[{request_id}] Starting query handling for site: {site}, query_id: {query_id}")
         
@@ -179,7 +186,7 @@ class StreamingHandler(SimpleHTTPRequestHandler):
             handlerClass = self.siteToClass(site)
             self.logger.debug(f"[{request_id}] Created handler instance: {handlerClass.__name__}")
             
-            handler = handlerClass(site, query, prev, model, http_handler=self, query_id=query_id)
+            handler = handlerClass(site, query, prev, model, http_handler=self, query_id=query_id, context_url=context_url)
             self.logger.debug(f"[{request_id}] Getting ranked answers")
             
             await handler.getRankedAnswers()
