@@ -27,3 +27,4 @@ code/strv2/acs.py
 *.pyc
 *.csv
 *.db
+*.log
