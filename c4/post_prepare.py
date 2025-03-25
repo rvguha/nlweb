@@ -1,3 +1,4 @@
+from time import sleep
 import mllm
 import retriever
 import asyncio
@@ -21,9 +22,9 @@ class PostPrepare:
         
         # if decontextualized query is different from the original query, 
         # then we need to retrieve items again
-        if (self.handler.decontextualized_query != self.handler.query):
-            print("Retrieving items again because decontextualized query is different from the original query")
-            items = await self.handler.retrieve_items().do()
+        if (self.handler.requires_decontextualization):
+            print(f"Retrieving items again because decontextualized query ({self.handler.decontextualized_query}) is different from the original query ({self.handler.query})")
+            items = await self.handler.retrieve_items(self.handler.decontextualized_query).do()
             self.handler.final_retrieved_items = items
         else:
             self.handler.final_retrieved_items = self.handler.retrieved_items

@@ -31,7 +31,7 @@ class RelevanceDetection:
     async def do(self):
         prompt_str, ans_struc = self.get_prompt()
         prompt = fill_prompt(prompt_str, self.handler)
-        print(prompt)
+        print(f"Relevance detection prompt: {prompt}")
         response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
         self.site_is_irrelevant_to_query = response["site_is_irrelevant_to_query"]
         self.explanation_for_irrelevance = response["explanation_for_irrelevance"]
@@ -42,6 +42,6 @@ class RelevanceDetection:
             self.handler.query_done = True
             await self.handler.http_handler.write_stream(message)
         else:
-            print(f"site is relevant to query: {self.explanation_for_irrelevance}")
+          #  print(f"site is relevant to query: {self.explanation_for_irrelevance}")
             self.handler.query_is_irrelevant = False
             

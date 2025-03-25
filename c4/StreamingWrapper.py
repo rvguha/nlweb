@@ -5,7 +5,7 @@ import asyncio
 from urllib.parse import parse_qs, urlparse
 from datetime import datetime
 import ssl
-from newBaseHandler import NLWebHandler
+from baseHandler import NLWebHandler
 
 
 class HandleRequest():

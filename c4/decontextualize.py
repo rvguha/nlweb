@@ -2,6 +2,8 @@ import mllm
 import retriever
 from trim import trim_json
 from prompts import find_prompt, fill_prompt
+from state import NLWebHandlerState
+
 
 class NoOpDecontextualizer:
     def __init__(self, handler):
@@ -9,6 +11,7 @@ class NoOpDecontextualizer:
 
     async def do(self):
         self.handler.decontextualized_query = self.handler.query
+        self.handler.state.decontextualization = NLWebHandlerState.DONE
         return
     
 class PrevQueryDecontextualizer:
@@ -40,20 +43,14 @@ class PrevQueryDecontextualizer:
         prompt_str, ans_struc = self.get_prompt()
         prompt = fill_prompt(prompt_str, self.handler)
         response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
-        self.handler.requires_decontextualization = response["requires_decontextualization"]
-        if (self.handler.requires_decontextualization == "True"):
+        if (response["requires_decontextualization"] == "True"):
+            self.handler.requires_decontextualization = True
+        if (self.handler.requires_decontextualization):
+            self.handler.abort_fast_track = True
             self.handler.decontextualized_query = response["decontextualized_query"]
-            message = {"message_type": "decontextualized_query", "query": self.handler.decontextualized_query}
-            try:
-                await self.handler.http_handler.write_stream(message)
-                print(f"Decontextualized query: {self.handler.decontextualized_query}")
-            except (BrokenPipeError, ConnectionResetError):
-                print("Client disconnected during decontextualization")
-                self.handler.is_connection_alive = False
-                self.handler.decontextualized_query = self.handler.query
         else:
             self.handler.decontextualized_query = self.handler.query
-        print(f"decontextualized_query: {self.handler.decontextualized_query}")
+        self.handler.state.decontextualization = NLWebHandlerState.DONE
         return
 
 class ContextUrlDecontextualizer(PrevQueryDecontextualizer):

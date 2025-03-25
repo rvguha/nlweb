@@ -5,11 +5,14 @@ import json
 import utils
 from trim import trim_json
 from prompts import find_prompt, fill_ranking_prompt
-
+from state import NLWebHandlerState
 class Ranking:
      
     EARLY_SEND_THRESHOLD = 65
     NUM_RESULTS_TO_SEND = 10
+
+    FAST_TRACK = 0
+    POST_DECONTEXTUALIZATION = 1
 
     RANKING_PROMPT = ["""Assign a score between 0 and 100 to the following {self.handler.item_type}
 based on how relevant it is to the user's question. Use your knowledge from other sources, about the item, to make a judgement.
@@ -32,15 +35,20 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
         else:
             return prompt_str, ans_struc
         
-    def __init__(self, handler):
+    def __init__(self, handler, items, ranking_type=FAST_TRACK):
+        print(f"Ranking type: {ranking_type}")
         self.handler = handler
+        self.items = items
         self.num_results_sent = 0
         self.rankedAnswers = []
+        self.ranking_type = ranking_type
         self.model = "gpt-4o-mini"
         
     async def rankItem(self, url, json_str, name, site):
         if not self.handler.is_connection_alive:
             # Skip processing if connection is already known to be lost
+            return
+        if (self.ranking_type == Ranking.FAST_TRACK and self.handler.abort_fast_track):
             return
         try:
             prompt_str, ans_struc = self.get_ranking_prompt()
@@ -55,7 +63,8 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
                 'schema_object': json_str,
                 'sent': False
             }
-            if (ranking["score"] > self.EARLY_SEND_THRESHOLD and self.handler.streaming and self.handler.is_connection_alive):
+            if (ranking["score"] > self.EARLY_SEND_THRESHOLD and self.handler.streaming and 
+                self.handler.is_connection_alive):
                 try:
                     await self.sendAnswers([ansr])
                 except (BrokenPipeError, ConnectionResetError):
@@ -81,18 +90,26 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
         if not self.handler.is_connection_alive:
             print("Connection lost during ranking, skipping sending results")
             return
+        
+        if (self.ranking_type == Ranking.FAST_TRACK and self.handler.abort_fast_track):
+            return
+        
+        if (self.handler.state.decontextualization != NLWebHandlerState.DONE):
+            print("Not sending answers because decontextualization is not done")
+            return
             
         json_results = []
         #print(f"Considering sending {len(answers)} answers")
         for result in answers:
             if self.shouldSend(result) or force:
+                atn = "(fast)" if self.ranking_type == Ranking.FAST_TRACK else "Second"
                 json_results.append({
                     "url": result["url"],
                     "name": result["name"],
                     "site": result["site"],
                     "siteUrl": result["site"],
                     "score": result["ranking"]["score"],
-                    "description": result["ranking"]["description"],
+                    "description": result["ranking"]["description"] + atn,
                     "explanation": result["ranking"]["explanation"],
                     "schema_object": result["schema_object"],
                 })
@@ -117,7 +134,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
     async def do(self):
         tasks = []
            
-        for url, json_str, name, site in self.handler.final_retrieved_items:
+        for url, json_str, name, site in self.items:
             if self.handler.is_connection_alive:  # Only add new tasks if connection is still alive
                 tasks.append(asyncio.create_task(self.rankItem(url, json_str, name, site)))
             
@@ -126,7 +143,14 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
         if not self.handler.is_connection_alive:
             print("Connection lost during ranking, skipping sending results")
             return
-                
+        
+        while (self.handler.state.decontextualization != NLWebHandlerState.DONE):
+            print("Waiting for decontextualization to complete")
+            await asyncio.sleep(.05)
+        
+        if (self.ranking_type == Ranking.FAST_TRACK and self.handler.abort_fast_track):
+            return
+        
         results = [r for r in self.rankedAnswers if r['sent'] == False]
         if (self.num_results_sent > self.NUM_RESULTS_TO_SEND):
             print("returning without looking at remaining results")

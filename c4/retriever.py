@@ -4,14 +4,15 @@ import mllm
 async def initialize():
     global milvus_client_prod
     milvus_client_prod = MilvusClient("../milvus/milvus_prod.db")
-    await MilvusQueryRetriever(None).search_db("test", "all", 10)
+    await MilvusQueryRetriever("test", None).search_db("test", "all", 10)
 
 class MilvusQueryRetriever:
-    def __init__(self, handler):
+    def __init__(self, query, handler):
+        self.db_query = query
         self.handler = handler
 
     async def do(self):
-        results = await self.search_db(self.handler.query, self.handler.site, 50)
+        results = await self.search_db(self.db_query, self.handler.site, 50)
         self.handler.retrieved_items = results
         return results
 

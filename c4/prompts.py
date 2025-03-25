@@ -1,7 +1,7 @@
 import utils
 from xml.etree import ElementTree as ET
 import json 
-
+from state import NLWebHandlerState
 BASE_NS = "http://nlweb.ai/base"
 
 prompt_roots = []
@@ -63,10 +63,9 @@ def get_prompt_variable_value(variable, handler):
         item_type = utils.siteToItemType(site)
         return item_type.split("}")[1]
     elif variable == "request.query":
-        if (handler.decontextualization_done):
+        if (handler.state.decontextualization == NLWebHandlerState.DONE):
             return handler.decontextualized_query
         else:
-            print("Decontextualization not done, but request.query is being used")
             return query
     elif variable == "request.previousQueries":
         return str(prev_queries)
