@@ -93,10 +93,11 @@ class HandleRequest():
     
     async def handle_query(self, site, query, prev, model, query_id, context_url):
         request_id = f"query_{int(time.time()*1000)}"
-        print(f"[{request_id}] Starting query handling for site: {site}, query_id: {query_id}")
+        print(f"[{request_id}] XXX Starting query handling for site: {site}, query_id: {query_id}")
         
         try:
             handlerClass = requestToHandlerClass(self)
+            print(f"[{request_id}] handlerClass: {handlerClass.__name__}")
             print(f"[{request_id}] Created handler instance: {handlerClass.__name__}")
             
             handler = handlerClass(site, query, prev, model, http_handler=self, query_id=query_id, context_url=context_url)

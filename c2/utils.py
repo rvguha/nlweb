@@ -33,14 +33,15 @@ def requestToHandlerClass(request):
     site = request.query_params.get('site', ['imdb'])
     context_url = request.query_params.get('context_url', '')
     item_type = siteToItemType(site)
-
-    if site == "imdb":
+    print(f"site: {site}, item_type: {item_type}")
+    if "imdb" in site:
         return GraphStructureHandler
     elif context_url != '':
         return ContextSensitiveHandler
-    elif site == "zillow":
+    elif "zillow" in site:
         return LocationSensitiveHandler
-    elif site == "latam_recipes":
+    elif "latam_recipes" in site:
+        print("latam_recipes")
         return ItemTypeSensitiveRedirectHandler
     elif item_type == "Recipe":
         return RecipeHandler
