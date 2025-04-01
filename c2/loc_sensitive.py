@@ -29,7 +29,9 @@ class LocationSensitiveHandler(BaseNLWebHandler):
 
     async def analyzeQuery(self):
         print("loc_sensitive analyze query")
-        await self.decontextualizeQuery()
+        task_set = [asyncio.create_task(self.retrieveItemsProactve()),
+                    asyncio.create_task(self.decontextualizeQuery())]
+        await asyncio.gather(*task_set)
         await self.isLocationKnown()
         print(f"location_known: {self.location_known}")
        

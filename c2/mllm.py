@@ -60,10 +60,16 @@ def get_provider(model_name: str) -> ModelProvider:
         raise ValueError(f"Unknown model provider for model: {model_name}")
 
 
-def get_embedding(query: str) -> list[float]:
+def get_embedding(query: str, size: int = 1536) -> list[float]:
     client = LLMClients.get_openai()
+    if (size == 1536):
+        model = "text-embedding-3-small"
+    elif (size == 3072):
+        model = "text-embedding-3-large"
+    else:
+        raise ValueError(f"Unknown embedding size: {size}")
     response = client.embeddings.create(
-        model="text-embedding-3-small",
+        model=model,
         input=query
     )
     return response.data[0].embedding

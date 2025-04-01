@@ -7,6 +7,7 @@ def listify (item):
         return item
 
 def trim_json(obj):
+   
     objType = obj["@type"] if "@type" in obj else ["Thing"]
     if not isinstance(objType, list):
         objType = [objType]
@@ -27,7 +28,7 @@ def trim_json_hard(obj):
     if ("Recipe" in objType):
         return trim_recipe_hard(obj)
     if ("Movie" in objType or "TVSeries" in objType):
-        return trim_movie_hard(obj)
+        return trim_movie(obj, hard=True)
    
 
 def trim_recipe(obj):
@@ -52,10 +53,14 @@ def trim_recipe_hard(obj):
         js[attr] = items[attr]
     return js
 
-def trim_movie(obj):
+
+
+def trim_movie(obj, hard=False):
     items = collateObjAttr(obj)
     js = {}
     skipAttrs = ["mainEntityOfPage", "publisher", "image", "datePublished", "dateModified", "author", "trailer"]
+    if (hard):
+        skipAttrs.extend(["actor", "director", "creator", "review"])
     for attr in items.keys():
         if (attr in skipAttrs):
             continue

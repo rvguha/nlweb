@@ -98,19 +98,19 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
         if not self.is_connection_alive:
             # Skip processing if connection is already known to be lost
             return
-            
+
         try:
             prompt_str, ans_struc = self.RANKING_PROMPT
-            description = trim_json(json_str)
-            prompt = prompt_str.format(self=self, description=description)
+            schema_object = json.loads(json_str)
+            description = trim_json(schema_object)
+            prompt = prompt_str.format(self=self, description=description)  
             ranking = await mllm.get_structured_completion_async(prompt, ans_struc, self.model)
-            # print(f"Ranking: {ranking}")
             ansr = {
                 'url': url,
                 'site': site,
                 'name': name,
                 'ranking': ranking,
-                'schema_object': json_str,
+                'schema_object': schema_object,
                 'sent': False
             }
             if (ranking["score"] > EARLY_SEND_THRESHOLD and self.streaming and self.is_connection_alive):

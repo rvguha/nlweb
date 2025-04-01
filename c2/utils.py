@@ -13,17 +13,19 @@ recipe_sites = ["seriouseats", "hebbarskitchen", "latam_recipes",
 all_sites = recipe_sites + ["imdb", "npr podcasts", "neurips", "backcountry", "tripadvisor"]
 
 def siteToItemType(site):
-    if site == "imdb":
+    if site == "imdb" or "imdb" in site:
         return "Movie"
     elif site in recipe_sites:
         return "Recipe"
+    elif isinstance(site, list) and site[0] in recipe_sites:
+        return "Recipe"
     elif site == "npr podcasts":
         return "Thing"
-    elif site == "neurips":
+    elif site == "neurips" or "neurips" in site:
         return "Paper"
-    elif site == "backcountry":
+    elif site == "backcountry" or "backcountry" in site:
         return "Outdoor Gear"
-    elif site == "tripadvisor":
+    elif site == "tripadvisor" or "tripadvisor" in site:
         return "Restaurant"
     else:
         return "Items"
@@ -45,7 +47,7 @@ def requestToHandlerClass(request):
         return ItemTypeSensitiveRedirectHandler
     elif item_type == "Recipe":
         return RecipeHandler
-    elif site == "nlws":
+    elif "nlws" in site:
         return NLWSHandler
     else:
         return BaseNLWebHandler

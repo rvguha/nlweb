@@ -19,8 +19,10 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100"}]
      
     SYNTHESIZE_PROMPT = ["""Given the following items, synthesize an answer to the user's question. 
                           You do not need to include all the items, but you should include the most relevant ones.
-                          For each of the items included in the answer, provide the url of the item. Pick items from 
-                          different sites. Do not include links in the answer field of the structured output.
+                          For each of the items included in the answer, provide the URL of the item in 
+                         the 'urls' field of the structured output. Make sure to include 
+                          the URL for every one of the items. Pick items from 
+                          different sites.  
                           The user's question is: {self.decontextualized_query}.
                           The items are: {self.items}.""" , 
                           {"answer" : "string", "urls" : "urls of the items included in the answer"}]
@@ -76,6 +78,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100"}]
         description_tasks = []
         answer = response["answer"]
         message = {"message_type": "nlws", "answer": response["answer"], "items": json_results}
+        
         await self.http_handler.write_stream(message)
         for url in response["urls"]:
             item = next((item for item in self.items if item[0] == url), None)
