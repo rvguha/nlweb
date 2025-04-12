@@ -6,7 +6,7 @@ import os
 
 skipTypes = ["ItemList", "ListItem", "AboutPage", "WebPage", "WebSite", "Organization", "Person"]
 
-includeTypes = ["Recipe", "NeurIPSPoster", "InvitedTalk", "Oral", "Movie", 
+includeTypes = ["Recipe", "NeurIPSPoster", "InvitedTalk", "Oral", "Movie", "LocalBusiness",
                 "TVShow", "TVEpisode", "Product", "Offer", "PodcastEpisode", 
                 "Podcast", "TVSeries", "ProductGroup", "Event", "FoodEstablishment",
                 "Apartment", "House", "Home", "RealEstateListing","SingleFamilyResidence", "Offer"] 

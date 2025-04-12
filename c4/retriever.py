@@ -1,82 +1,54 @@
-from pymilvus import MilvusClient
+import milvus_retrieve
+import azure_retrieve
 import mllm
+import time
+import milvus_retrieve
 
-async def initialize():
-    global milvus_client_prod
-    milvus_client_prod = MilvusClient("../milvus/milvus_prod.db")
-    await MilvusQueryRetriever("test", None).search_db("test", "all", 10)
 
-class MilvusQueryRetriever:
-    def __init__(self, query, handler):
+class DBQueryRetriever:
+    def __init__(self, query, handler, db_type="azure_ai_search"):
         self.db_query = query
         self.handler = handler
+        self.db_type = db_type
+
+    async def search_db(self, query, site, num_results=50):
+        start_time = time.time()
+        site = site.replace(" ", "_")
+        print(f"retrieval query: {query}, site: '{site}', db: {self.db_type}")
+        if (self.db_type == "milvus"):
+            results = milvus_retrieve.search_db(query, site, num_results)
+        elif (self.db_type == "azure_ai_search"):
+            if site == "all" or site == "nlws":
+                results = await azure_retrieve.search_all_sites(query, num_results)
+            else:
+                results = await azure_retrieve.search_db(query, site, num_results)
+        else:
+            raise ValueError(f"Invalid database: {self.db_type}")
+        end_time = time.time()
+        print(f"Search took {end_time - start_time:.2f} seconds")
+        return results
 
     async def do(self):
         results = await self.search_db(self.db_query, self.handler.site, 50)
         self.handler.retrieved_items = results
+        self.handler.state.retrieval_done = True
         return results
 
-
-    async def search_db(self, query, site, num_results=50):
-        print(f"query: {query}, site: {site}")
-        embedding = mllm.get_embedding(query)
-        client = milvus_client_prod 
-        if (site == "npr podcasts"):
-            site = ["npr podcasts", "med podcast"]
-        if (site == "nlws"):
-            site = "all"
-        if (site == "all"):
-            res = client.search(
-                collection_name="prod_collection",
-                data=[embedding],
-                limit=num_results,
-                output_fields=["url", "text", "name", "site"],
-            )
-        elif isinstance(site, list):
-            site_filter = " || ".join([f"site == '{s}'" for s in site])
-            res = client.search(
-                collection_name="prod_collection", 
-                data=[embedding],
-                filter=site_filter,
-                limit=num_results,
-                output_fields=["url", "text", "name", "site"],
-            )
-        else:
-            res = client.search(
-                collection_name="prod_collection",
-                data=[embedding],
-                filter=f"site == '{site}'",
-                limit=num_results,
-                output_fields=["url", "text", "name", "site"],
-            )
-
-        retval = []
-        for item in res[0]:
-            ent = item["entity"]
-            retval.append([ent["url"], ent["text"], ent["name"], ent["site"]])
-        print(f"Retrieved {len(retval)} items")
-        return retval
-
-class MilvusItemRetriever:
-    def __init__(self, handler):
+class DBItemRetriever:
+    def __init__(self, handler, db_type="azure_ai_search"):
         self.handler = handler
+        self.db_type = db_type
 
     async def do(self):
         results = await self.retrieve_item_with_url(self.handler.context_url)
         self.handler.context_item = results
         
+    def retrieve_item_with_url(self, url):
+        if (self.db_type == "milvus"):
+            return milvus_retrieve.retrieve_item_with_url(url)
+        elif (self.db_type == "azure_ai_search"):
+            return azure_retrieve.retrieve_item_with_url(url)
+        else:
+            raise ValueError(f"Invalid database: {self.db_type}")
 
-    async def retrieve_item_with_url(url):
-        client = milvus_client_prod 
-        print(f"Querying for '{url}'")
-        res = client.query(
-            collection_name="prod_collection",
-        #    data=[embedding],
-            filter=f"url == '{url}'",
-            limit=1,
-            output_fields=["url", "text", "name", "site"],
-        )
-    #  print(f"Retrieved {res}")
-        if (len(res) == 0):
-            return None
-        return res[0]
+  

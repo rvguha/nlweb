@@ -197,7 +197,9 @@ class ManagedEventSource {
       } else if (data && data.message_type == "remember") {
         this.chatInterface.memoryMessage(data.message, this.chatInterface)    
       } else if (data && data.message_type == "site_is_irrelevant_to_query") {
-        this.chatInterface.memoryMessage(data.explanation_for_irrelevance, this.chatInterface)
+        this.chatInterface.siteIsIrrelevantToQuery(data.message, this.chatInterface)  
+      } else if (data && data.message_type == "ask_user") {
+        this.chatInterface.askUserMessage(data.message, this.chatInterface)    
       } else if (data && data.message_type == "item_details") {
         this.chatInterface.itemDetailsMessage(data.message, this.chatInterface)    
       } else if (data && data.message_type == "result_batch") {
@@ -311,7 +313,7 @@ class ChatInterface {
     }
 
     sites () {
-      return ['imdb', 'seriouseats', 'npr podcasts', 'backcountry', 'bc_product', 'neurips', 'zillow',
+      return ['imdb', 'nytimes', 'alltrails', 'seriouseats', 'npr podcasts', 'backcountry', 'bc_product', 'neurips', 'zillow',
       'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'med podcast', 'all'];
     }
     createSelectors() {
@@ -355,9 +357,7 @@ class ChatInterface {
       this.selector.appendChild(this.makeSelectorLabel("Model"))
       const modelSelect = document.createElement('select');
       this.modelSelect = modelSelect;
-      const models = ['auto', 'gpt-4o-mini', 'gpt-4o', 'gemini-1.5-flash', 
-        'gemini-1.5-pro', 'gemini-2.0-flash-exp', 
-        'claude-3-5-sonnet-latest', 'claude-3-5-haiku-latest'];
+      const models = ['auto', 'gpt-4o-mini (Azure)', 'gpt-4o (Azure)','gpt-4o-mini (OAI)', 'gpt-4o (OAI)', 'claude-3-opus-20240229 (Claude)', 'deepseek-v3 (DeepSeek)'];
       models.forEach(model => {
         const option = document.createElement('option');
         option.value = model;
@@ -484,19 +484,27 @@ class ChatInterface {
   
     extractImage(schema_object) {
       if (schema_object && schema_object.image) {
-          let image = schema_object.image;
-          if (typeof image === 'string') {
-              return image;
-          } else if (typeof image === 'object' && image.url) {
-              return image.url;
-          } else if (image instanceof Array) {
-              return image[0];
-          }
-          return schema_object.image;
+        return this.extractImageInternal(schema_object.image);
       }
+    }
+
+    extractImageInternal(image) {
+      if (typeof image === 'string') {
+          return image;
+      } else if (typeof image === 'object' && image.url) {
+          return image.url;
+      } else if (typeof image === 'object' && image.contentUrl) {
+          return image.contentUrl;
+      } else if (image instanceof Array) {
+        if (image[0] && typeof image[0] === 'string') {
+          return image[0];
+        } else if (image[0] && typeof image[0] === 'object') {
+          return this.extractImageInternal(image[0]);
+        }
+      } 
       return null;
     }
-  
+    
     htmlUnescape(str) {
     const div = document.createElement("div");
     div.innerHTML = str;
@@ -644,7 +652,7 @@ class ChatInterface {
       
       
       // Create popup element
-      infoIcon.title = item.explanation + "(" + item.score + ")";
+      infoIcon.title = item.explanation + "(score=" + item.score + ")" + "(Ranking time=" + item.time + ")";
      // questionIcon.style.cursor = 'help';
       titleRow.appendChild(infoIcon);
   
@@ -750,6 +758,22 @@ class ChatInterface {
         chatInterface.bubble.appendChild(messageDiv);
         return messageDiv;
     }
+  }
+
+  askUserMessage(message, chatInterface) { 
+    console.log("askUserMessage", message);
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `ask-user-message`;
+    messageDiv.textContent = message;
+    chatInterface.bubble.appendChild(messageDiv);
+  }
+
+  siteIsIrrelevantToQuery(message, chatInterface) { 
+    console.log("siteIsIrrelevantToQuery", message);
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `site-is-irrelevant-to-query`;
+    messageDiv.textContent = message;
+    chatInterface.bubble.appendChild(messageDiv);
   }
 
   itemDetailsMessage(itemDetails, chatInterface) { 

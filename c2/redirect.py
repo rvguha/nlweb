@@ -2,6 +2,7 @@ import asyncio
 from baseHandler import BaseNLWebHandler
 import mllm
 import utils
+import azure_completion
 
 class ItemTypeSensitiveRedirectHandler(BaseNLWebHandler):
 
@@ -11,7 +12,8 @@ class ItemTypeSensitiveRedirectHandler(BaseNLWebHandler):
     async def analyzeQueryForItemType(self):
         prompt_str, ans_struc = self.DETERMINE_ITEM_TYPE_PROMPT
         prompt = prompt_str.format(self=self)
-        response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
+      # response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
+        response = await azure_completion.get_completion(prompt, ans_struc, "gpt-4o")
         print(f"response: {response}")
         self.item_type = response["item_type"]
 
@@ -23,6 +25,7 @@ class ItemTypeSensitiveRedirectHandler(BaseNLWebHandler):
         await asyncio.gather(*task_set)
         if (self.item_type != utils.siteToItemType(self.site)):
              sites = utils.itemTypeToSite(self.item_type)
+             self.requires_decontextualization = True
              print(f"redirect sites: {sites}")
              message = {"message_type": "remember", "item_to_remember": 
                        self.query, "message": "Asking " + " ".join(sites)}

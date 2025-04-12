@@ -1,9 +1,11 @@
 import mllm
+import azure_completion
 import retriever
 import asyncio
 import json
 import utils
 from trim import trim_json
+import time
 
 NUM_RESULTS_TO_SEND = 10
 EARLY_SEND_THRESHOLD = 55
@@ -24,7 +26,7 @@ class BaseNLWebHandler :
                                      "decontextualized_query" : "The rewritten query"}]
     
     
-    RANKING_PROMPT = ["""Assign a score between 0 and 100 to the following {self.item_type}
+    OLD_RANKING_PROMPT = ["""Assign a score between 0 and 100 to the following {self.item_type}
 based on how relevant it is to the user's question. Use your knowledge from other sources, about the item, to make a judgement.
 Provide a short description of the item that is relevant to the user's question, without mentioning the user's question.
 Provide an explanation of the relevance of the item to the user's question, without mentioning the user's question or the score or explicitly mentioning the term relevance.
@@ -33,6 +35,14 @@ The user's question is: {self.decontextualized_query}.
 The item is: {description}.""" , {"score" : "integer between 0 and 100", 
  "description" : "short description of the item", 
  "explanation" : "explanation of the relevance of the item to the user's question"}]
+    
+    RANKING_PROMPT = ["""Assign a score between 0 and 100 to the following {self.item_type}
+based on how relevant it is to the user's question. Use your knowledge from other sources, about the item, to make a judgement.
+If the score is over 50, provide a short description, of less than 50 words, of the item showing its relevant to the user's question, without mentioning the user's question.
+
+The user's question is: {self.decontextualized_query}.
+The item is: {description}.""" , {"score" : "integer between 0 and 100", 
+ "description" : "short description of the item"}]
 
     def __init__(self, site, query, prev_queries=[], model="gpt-4o-mini", http_handler=None, query_id=None, context_url=None):
         self.site = site
@@ -71,7 +81,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
        self.query_analysis_done = True
 
     async def retrieveItemsProactve(self):
-        self.retrieved_items = retriever.search_db(self.query, self.site)
+        self.retrieved_items = await retriever.search_db(self.query, self.site)
           
     async def decontextualizeQuery(self):
         if (len(self.prev_queries) < 5):
@@ -80,7 +90,8 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
             return
         prompt_str, ans_struc = self.DECONTEXTUALIZE_QUERY_PROMPT
         prompt = prompt_str.format(self=self)
-        response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
+        #response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
+        response = await azure_completion.get_completion(prompt, ans_struc, "gpt-4o")
         print(f"response: {response}")
         self.requires_decontextualization = response["requires_decontextualization"]
         self.decontextualized_query = response["decontextualized_query"]
@@ -104,14 +115,20 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
             schema_object = json.loads(json_str)
             description = trim_json(schema_object)
             prompt = prompt_str.format(self=self, description=description)  
-            ranking = await mllm.get_structured_completion_async(prompt, ans_struc, self.model)
+            start_time = time.time()
+            #ranking = await mllm.get_structured_completion_async(prompt, ans_struc, self.model)
+            ranking = await azure_completion.get_completion(prompt, ans_struc, self.model)
+            end_time = time.time()
+            processing_time = round(end_time - start_time, 2)
+           # print(f"Ranking completion took {processing_time:.2f} seconds")
             ansr = {
                 'url': url,
                 'site': site,
                 'name': name,
                 'ranking': ranking,
                 'schema_object': schema_object,
-                'sent': False
+                'sent': False,
+                'time': processing_time
             }
             if (ranking["score"] > EARLY_SEND_THRESHOLD and self.streaming and self.is_connection_alive):
                 try:
@@ -148,8 +165,9 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
                     "site": result["site"],
                     "siteUrl": result["site"],
                     "score": result["ranking"]["score"],
+                    "time": result["time"],
                     "description": result["ranking"]["description"],
-                    "explanation": result["ranking"]["explanation"],
+                    "explanation": "", #result["ranking"]["explanation"],
                     "schema_object": result["schema_object"],
                 })
                 if (self.streaming):
@@ -194,6 +212,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
                 self.is_connection_alive = False
     
     async def getRankedAnswers(self):
+        print("Getting ranked answers xxx")
         try:
             await self.analyzeQuery()
             if not self.is_connection_alive:
@@ -201,11 +220,11 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
                 return
             
             if (self.requires_decontextualization == "True"):
-                top_embeddings = retriever.search_db(self.decontextualized_query, self.site)
+                top_embeddings = await retriever.search_db(self.decontextualized_query, self.site)
             else:
                 top_embeddings = self.retrieved_items
 
-            if (self.site == "all"):
+            if (self.site == "all" or self.site == "nlws"):
                 await self.sendMessageOnSitesBeingAsked(top_embeddings)
 
             tasks = []

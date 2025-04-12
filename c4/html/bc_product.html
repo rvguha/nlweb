@@ -63,7 +63,7 @@
     // Get product cards
     let parsedContent;
     const host = "http://74.179.100.160:8000";
-    var url = `/ask?query=${encodeURIComponent(message)}&site=bc_product&num=12&model=gpt-4o&prev=${encodeURIComponent(this.prevMessages.join(','))}`;
+    var url = `/ask?query=${encodeURIComponent(message)}&site=backcountry&num=12&model=gpt-4o&prev=${encodeURIComponent(this.prevMessages.join(','))}`;
     url = url + `&context_url=${encodeURIComponent(context_url)}`;
    
     // const url = `http://74.179.100.160:8080/?query=${encodeURIComponent(message)}&site=backcountry&num=12&prev=${encodeURIComponent(this.prevMessages.join(','))}`;

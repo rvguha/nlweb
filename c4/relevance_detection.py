@@ -5,10 +5,11 @@ import json
 import utils
 from trim import trim_json
 from prompts import find_prompt, fill_prompt
+from state import NLWebHandlerState
 
 class RelevanceDetection:
 
-    RELEVANCE_PROMPT = ["""The user is querying the site {request.site} which has information about {site.itemType}s.
+    RELEVANCE_PROMPT = ["""The user is querying the site {request.site} cooking which has information about {site.itemType}s.
       Is the content on the site anyway relevant to the user's query? The user's query is: {request.query}.""",
 
       {"site_is_irrelevant_to_query": "True or False",
@@ -29,19 +30,23 @@ class RelevanceDetection:
         self.handler = handler
 
     async def do(self):
+        if (self.handler.site == 'all' or self.handler.site == 'nlws'):
+            return
         prompt_str, ans_struc = self.get_prompt()
         prompt = fill_prompt(prompt_str, self.handler)
-        print(f"Relevance detection prompt: {prompt}")
-        response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
+        response = await mllm.get_structured_completion_async(prompt, ans_struc)
         self.site_is_irrelevant_to_query = response["site_is_irrelevant_to_query"]
         self.explanation_for_irrelevance = response["explanation_for_irrelevance"]
         if (self.site_is_irrelevant_to_query == "True"):
             print(f"site is irrelevant to query: {self.explanation_for_irrelevance}")
-            message = {"message_type": "site_is_irrelevant_to_query", "explanation_for_irrelevance": self.explanation_for_irrelevance}
+            message = {"message_type": "site_is_irrelevant_to_query", "message": self.explanation_for_irrelevance}
             self.handler.query_is_irrelevant = True
             self.handler.query_done = True
+            self.handler.abort_fast_track = True
             await self.handler.http_handler.write_stream(message)
         else:
           #  print(f"site is relevant to query: {self.explanation_for_irrelevance}")
             self.handler.query_is_irrelevant = False
+        self.handler.state.query_relevance = NLWebHandlerState.DONE
+
             

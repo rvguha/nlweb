@@ -204,7 +204,7 @@ async def get_structured_completion_async(
     
     # Create the system prompt that includes the schema
     system_prompt = f"""Provide a response that matches this JSON schema: {json.dumps(json_schema)}"""
-    
+   # print(f"System prompt: {system_prompt} {prompt}")
     try:
         if provider == ModelProvider.OPENAI:
             client = LLMClients.get_async_openai()

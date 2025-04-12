@@ -5,9 +5,17 @@ def listify (item):
         return [item]
     else:
         return item
+    
+def jsonify(obj):
+    if isinstance(obj, str):
+        try:
+            obj = json.loads(obj)
+        except json.JSONDecodeError:
+            return obj
+    return obj
 
 def trim_json(obj):
-   
+    obj = jsonify(obj)
     objType = obj["@type"] if "@type" in obj else ["Thing"]
     if not isinstance(objType, list):
         objType = [objType]
@@ -20,6 +28,7 @@ def trim_json(obj):
     return obj
 
 def trim_json_hard(obj):
+    obj = jsonify(obj)
     objType = obj["@type"] if "@type" in obj else ["Thing"]
     if not isinstance(objType, list):
         objType = [objType]
@@ -32,6 +41,7 @@ def trim_json_hard(obj):
    
 
 def trim_recipe(obj):
+    obj = jsonify(obj)
     items = collateObjAttr(obj)
     js = {}
     skipAttrs = ["mainEntityOfPage", "publisher", "image", "datePublished", "dateModified", 

@@ -51,7 +51,8 @@ class NLWebHandler :
         try:
             await self.prepare()
             await self.post_prepare_tasks()
-            if (self.query_done or not self.requires_decontextualization):
+            if (self.query_done or self.query_is_irrelevant):
+                print(f"query done or query is irrelevant")
                 return
             await self.get_ranked_answers()
         except Exception as e:
@@ -79,18 +80,21 @@ class NLWebHandler :
         self.state.required_info = NLWebHandlerState.IN_PROGRESS
         self.state.memory_items = NLWebHandlerState.IN_PROGRESS
 
-        tasks.append(asyncio.create_task(self.decontextualizeQuery().do()))
-        tasks.append(asyncio.create_task(fastTrack.FastTrack(self).do()))
-        tasks.append(asyncio.create_task(self.get_relevance_detection().do()))
+        self.state.retrieval_done = False
+
         tasks.append(asyncio.create_task(self.get_analyze_query().do()))
+       # if (self.prev_queries is None or len(self.prev_queries) == 0):
+            #skipping fast track for now
+          #  tasks.append(asyncio.create_task(fastTrack.FastTrack(self).do()))
+        tasks.append(asyncio.create_task(self.decontextualizeQuery().do()))
+        tasks.append(asyncio.create_task(self.get_relevance_detection().do()))
         tasks.append(asyncio.create_task(self.detect_memory_items().do()))
         tasks.append(asyncio.create_task(self.ensure_required_info().do()))
         await asyncio.gather(*tasks)
 
-        self.state.analyze_query = NLWebHandlerState.DONE
-        self.state.query_relevance = NLWebHandlerState.DONE
-        self.state.required_info = NLWebHandlerState.DONE
-        self.state.memory_items = NLWebHandlerState.DONE
+        if (self.state.retrieval_done == False):
+            items = await self.retrieve_items(self.query).do()
+            self.final_retrieved_items = items
         print(f"prepare tasks done")
     
     def detect_memory_items(self):
@@ -100,7 +104,7 @@ class NLWebHandler :
         return required_info.RequiredInfo(self)
         
     def retrieve_items(self, query):
-        return retriever.MilvusQueryRetriever(query, self)
+        return retriever.DBQueryRetriever(query, self)
     
     def get_analyze_query(self):
         return analyze_query.AnalyzeQuery(self)
@@ -112,10 +116,10 @@ class NLWebHandler :
         await post_prepare.PostPrepare(self).do()
     
     async def get_ranked_answers(self):
-        if (self.abort_fast_track):
-            try:
-                return await ranking.Ranking(self, self.final_retrieved_items, ranking.Ranking.POST_DECONTEXTUALIZATION).do()
-            except Exception as e:
-                print(f"Error in get_ranked_answers: {e}")
-                traceback.print_exc()
+        try:
+            print(f"Getting ranked answers on {len(self.final_retrieved_items)} items")
+            return await ranking.Ranking(self, self.final_retrieved_items, ranking.Ranking.REGULAR_TRACK).do()
+        except Exception as e:
+            print(f"Error in get_ranked_answers: {e}")
+            traceback.print_exc()
 

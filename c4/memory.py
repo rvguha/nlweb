@@ -5,6 +5,10 @@ import json
 import utils
 from trim import trim_json
 from prompts import find_prompt, fill_prompt
+from state import NLWebHandlerState
+
+
+
 class Memory:
 
     MEMORY_PROMPT = ["""The user is querying the site {self.handler.site} for {self.handler.item_type}. Analyze the following statement from the user. 
@@ -39,6 +43,7 @@ class Memory:
             print(f"writing memory request: {self.memory_request}")
             message = {"message_type": "remember", "item_to_remember": self.memory_request, "message": "I'll remember that"}
             await self.handler.http_handler.write_stream(message)
+        self.handler.state.memory_items = NLWebHandlerState.DONE
 
 
 if __name__ == "__main__":

@@ -40,7 +40,7 @@ all_dbs = ["seriouseats",
   #  "med podcast"
 ]  
 
-test_db = ["seriouseats"]
+test_db = ["nytimes"]
 
 search_clients = {}
 index_names = ["embeddings1536", "embeddings3072"]
@@ -286,4 +286,5 @@ def main():
     print(f"\nData processing completed successfully. {total_documents} total documents added.")
 
 if __name__ == "__main__":
-    main()
+    upload_data_from_csv(SEARCH_SERVICE_ENDPOINT, "/Users/guha/mahi/data/sites/embeddings/small/alltrails.txt", "alltrails", None)
+   # main()

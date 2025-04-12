@@ -4,6 +4,7 @@ import mllm
 import utils
 import retriever
 from trim import trim_json, trim_json_hard
+import json
 
 GATHER_ITEMS_THRESHOLD = 55
 
@@ -21,8 +22,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100"}]
                           You do not need to include all the items, but you should include the most relevant ones.
                           For each of the items included in the answer, provide the URL of the item in 
                          the 'urls' field of the structured output. Make sure to include 
-                          the URL for every one of the items. Pick items from 
-                          different sites.  
+                          the URL for every one of the items. Do not include the URL in the answer field.
                           The user's question is: {self.decontextualized_query}.
                           The items are: {self.items}.""" , 
                           {"answer" : "string", "urls" : "urls of the items included in the answer"}]
@@ -47,7 +47,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100"}]
        
     async def getRankedAnswers(self):
         await self.analyzeQuery()
-        top_embeddings = retriever.search_db(self.decontextualized_query, self.site)
+        top_embeddings = await retriever.search_db(self.decontextualized_query, self.site, num_results=30)
         await self.sendMessageOnSitesBeingAsked(top_embeddings)
         tasks = []
         for url, json_str, name, site in top_embeddings:
@@ -64,6 +64,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100"}]
             self.items.append([url, json_str, name, site])
 
     async def getDescription(self, url, json_str, query, answer, name, site):
+        print(f"getDescription: {url}")
         prompt_str, ans_struc = self.DESCRIPTION_PROMPT
         prompt = prompt_str.format(self=self, query=query, answer=answer, description=json_str)
         response  = await mllm.get_structured_completion_async(prompt, ans_struc, self.model)
@@ -94,7 +95,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100"}]
                     "name": name,
                     "description": description,
                     "site": site,
-                    "schema_object": json_str,
+                    "schema_object": json.loads(json_str),
                 })
         message = {"message_type": "nlws", "answer": response["answer"], "items": json_results}
         await self.http_handler.write_stream(message)

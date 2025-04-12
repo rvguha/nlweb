@@ -309,8 +309,8 @@ class ChatInterface {
     }
 
     sites () {
-      return ['imdb', 'seriouseats', 'npr podcasts', 'backcountry', 'bc_product', 'neurips', 'zillow',
-      'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'med podcast', 'all'];
+      return ['nytimes','imdb', 'alltrails', 'wirecutter', 'seriouseats', 'npr podcasts', 'backcountry', 'bc_product', 'neurips', 'zillow',
+      'tripadvisor', 'woksoflife', 'cheftariq', 'hebbarskitchen', 'latam_recipes', 'spruce', 'all'];
     }
     createSelectors() {
         // Create selectors
@@ -353,7 +353,7 @@ class ChatInterface {
       this.selector.appendChild(this.makeSelectorLabel("Model"))
       const modelSelect = document.createElement('select');
       this.modelSelect = modelSelect;
-      const models = ['auto', 'gpt-4o-mini', 'gpt-4o', 'gemini-1.5-flash', 
+      const models = ['auto', 'gpt-4o-mini', 'gpt-4o', 'deepseek-v3', 'gemini-1.5-flash', 
         'gemini-1.5-pro', 'gemini-2.0-flash-exp', 
         'claude-3-5-sonnet-latest', 'claude-3-5-haiku-latest'];
       models.forEach(model => {
@@ -482,16 +482,24 @@ class ChatInterface {
   
     extractImage(schema_object) {
       if (schema_object && schema_object.image) {
-          let image = schema_object.image;
-          if (typeof image === 'string') {
-              return image;
-          } else if (typeof image === 'object' && image.url) {
-              return image.url;
-          } else if (image instanceof Array) {
-              return image[0];
-          }
-          return schema_object.image;
+        return this.extractImageInternal(schema_object.image);
       }
+    }
+
+    extractImageInternal(image) {
+      if (typeof image === 'string') {
+          return image;
+      } else if (typeof image === 'object' && image.url) {
+          return image.url;
+      } else if (typeof image === 'object' && image.contentUrl) {
+          return image.contentUrl;
+      } else if (image instanceof Array) {
+        if (image[0] && typeof image[0] === 'string') {
+          return image[0];
+        } else if (image[0] && typeof image[0] === 'object') {
+          return this.extractImageInternal(image[0]);
+        }
+      } 
       return null;
     }
   
@@ -642,7 +650,7 @@ class ChatInterface {
       
       
       // Create popup element
-      infoIcon.title = item.explanation + "(" + item.score + ")";
+      infoIcon.title = item.explanation + "(score=" + item.score + ")" + "(Ranking time=" + item.time + ")";
      // questionIcon.style.cursor = 'help';
       titleRow.appendChild(infoIcon);
   
@@ -699,6 +707,7 @@ class ChatInterface {
       // Check for image in schema object
       if (item.schema_object) {
           const imgURL = this.extractImage(item.schema_object);
+          console.log("imgURL", imgURL);
           if (imgURL) {
               const imageDiv = document.createElement('div');
               const img = document.createElement('img');

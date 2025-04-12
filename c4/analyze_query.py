@@ -1,5 +1,7 @@
 import mllm
 from prompts import find_prompt, fill_prompt
+from state import NLWebHandlerState
+
 
 class AnalyzeQuery:
   
@@ -50,6 +52,7 @@ class AnalyzeQuery:
         self.handler.item_details_query = response["item_details_query"]
         self.handler.item_title = response["item_title"]
         self.handler.details_being_asked = response["details_being_asked"]
+        self.handler.state.analyze_query = NLWebHandlerState.DONE
         return
     
 

@@ -6,24 +6,25 @@ import utils
 from trim import trim_json
 from prompts import find_prompt, fill_ranking_prompt
 from state import NLWebHandlerState
+
+
 class Ranking:
      
     EARLY_SEND_THRESHOLD = 65
     NUM_RESULTS_TO_SEND = 10
 
-    FAST_TRACK = 0
-    POST_DECONTEXTUALIZATION = 1
+    FAST_TRACK = 1
+    REGULAR_TRACK = 2
 
-    RANKING_PROMPT = ["""Assign a score between 0 and 100 to the following {self.handler.item_type}
-based on how relevant it is to the user's question. Use your knowledge from other sources, about the item, to make a judgement.
-Provide a short description of the item that is relevant to the user's question, without mentioning the user's question.
+    RANKING_PROMPT = ["""  Assign a score between 0 and 100 to the following {site.itemType}
+based on how relevant it is to the user's question. Use your knowledge from other sources, about the item, to make a judgement. 
+If the score is above 50, provide a short description of the item highlighting the relevance to the user's question, without mentioning the user's question.
 Provide an explanation of the relevance of the item to the user's question, without mentioning the user's question or the score or explicitly mentioning the term relevance.
 If the score is below 75, in the description, include the reason why it is still relevant.
-The user's question is: {self.handler.decontextualized_query}.
-The item is: {description}.""" , {"score" : "integer between 0 and 100", 
- "description" : "short description of the item", 
- "explanation" : "explanation of the relevance of the item to the user's question"}]
-    
+The user's question is: {request.query}. The item's description is {item.description}""",
+    {"score" : "integer between 0 and 100", 
+ "description" : "short description of the item"}]
+ 
     RANKING_PROMPT_NAME = "RankingPrompt"
      
     def get_ranking_prompt(self):
@@ -36,7 +37,8 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
             return prompt_str, ans_struc
         
     def __init__(self, handler, items, ranking_type=FAST_TRACK):
-        print(f"Ranking type: {ranking_type}")
+        ll = len(items)
+        print(f"Ranking {ll} items of type {ranking_type}")
         self.handler = handler
         self.items = items
         self.num_results_sent = 0
@@ -49,6 +51,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
             # Skip processing if connection is already known to be lost
             return
         if (self.ranking_type == Ranking.FAST_TRACK and self.handler.abort_fast_track):
+            print("Aborting fast track")
             return
         try:
             prompt_str, ans_struc = self.get_ranking_prompt()
@@ -60,7 +63,7 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
                 'site': site,
                 'name': name,
                 'ranking': ranking,
-                'schema_object': json_str,
+                'schema_object': json.loads(json_str),
                 'sent': False
             }
             if (ranking["score"] > self.EARLY_SEND_THRESHOLD and self.handler.streaming and 
@@ -102,15 +105,14 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
         #print(f"Considering sending {len(answers)} answers")
         for result in answers:
             if self.shouldSend(result) or force:
-                atn = "(fast)" if self.ranking_type == Ranking.FAST_TRACK else "Second"
+                #atn = "(fast)" if self.ranking_type == Ranking.FAST_TRACK else "Second"
                 json_results.append({
                     "url": result["url"],
                     "name": result["name"],
                     "site": result["site"],
                     "siteUrl": result["site"],
                     "score": result["ranking"]["score"],
-                    "description": result["ranking"]["description"] + atn,
-                    "explanation": result["ranking"]["explanation"],
+                    "description": result["ranking"]["description"],
                     "schema_object": result["schema_object"],
                 })
                 if (self.handler.streaming):
@@ -145,10 +147,14 @@ The item is: {description}.""" , {"score" : "integer between 0 and 100",
             return
         
         while (self.handler.state.decontextualization != NLWebHandlerState.DONE):
+            if (self.handler.query_is_irrelevant):
+                print("Query irrelevant, returning")
+                return
             print("Waiting for decontextualization to complete")
-            await asyncio.sleep(.05)
+            await asyncio.sleep(.5)
         
         if (self.ranking_type == Ranking.FAST_TRACK and self.handler.abort_fast_track):
+            print("Aborting fast track")
             return
         
         results = [r for r in self.rankedAnswers if r['sent'] == False]

@@ -3,7 +3,7 @@ import retriever
 from trim import trim_json
 from prompts import find_prompt, fill_prompt
 from state import NLWebHandlerState
-
+import json
 
 class NoOpDecontextualizer:
     def __init__(self, handler):
@@ -12,6 +12,8 @@ class NoOpDecontextualizer:
     async def do(self):
         self.handler.decontextualized_query = self.handler.query
         self.handler.state.decontextualization = NLWebHandlerState.DONE
+        self.handler.requires_decontextualization = False
+        print("Decontextualization not required")
         return
     
 class PrevQueryDecontextualizer:
@@ -42,7 +44,9 @@ class PrevQueryDecontextualizer:
     async def do(self):
         prompt_str, ans_struc = self.get_prompt()
         prompt = fill_prompt(prompt_str, self.handler)
+        
         response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
+        print(f"Decontextualization response: {response}")
         if (response["requires_decontextualization"] == "True"):
             self.handler.requires_decontextualization = True
         if (self.handler.requires_decontextualization):
@@ -51,6 +55,7 @@ class PrevQueryDecontextualizer:
         else:
             self.handler.decontextualized_query = self.handler.query
         self.handler.state.decontextualization = NLWebHandlerState.DONE
+        print(f"Decontextualized query: {self.handler.decontextualized_query}")
         return
 
 class ContextUrlDecontextualizer(PrevQueryDecontextualizer):
@@ -60,7 +65,8 @@ class ContextUrlDecontextualizer(PrevQueryDecontextualizer):
             Rewrite the query to decontextualize it so that it can be answered 
             without reference to earlier queries or to the item description.""",
                                  
-                                    {"decontextualized_query" : "The rewritten query"}]
+                                    {"decontextualized_query" : "The rewritten query", 
+                                     "requires_decontextualization" : "True or False"}]
     
     DECONTEXTUALIZE_QUERY_PROMPT_NAME = "DecontextualizeContextPrompt"
      
@@ -70,15 +76,28 @@ class ContextUrlDecontextualizer(PrevQueryDecontextualizer):
         self.retriever = self.retriever()
 
     def retriever(self):
-        return retriever.MilvusItemRetriever(self.handler)  
+        return retriever.DBItemRetriever(self.handler)  
 
     async def do(self):
         await self.retriever.do()
         item = self.retriever.handler.context_item
-        self.context_description = trim_json(item["text"])
-        self.handler.context_description = self.context_description
-        super().do()
-        
+        if (item is None):
+            self.handler.requires_decontextualization = False
+            self.handler.state.decontextualization = NLWebHandlerState.DONE
+            return
+        else:
+            (url, schema_json, name, site) = item
+            self.context_description = json.dumps(trim_json(schema_json))
+            self.handler.context_description = self.context_description
+            prompt_str, ans_struc = self.get_prompt()
+            prompt = fill_prompt(prompt_str, self.handler)
+            response = await mllm.get_structured_completion_async(prompt, ans_struc, "gpt-4o")
+            self.handler.requires_decontextualization = True
+            self.handler.abort_fast_track = True
+            print("Setting abort fast track to true")
+            self.handler.decontextualized_query = response["decontextualized_query"]
+            self.handler.state.decontextualization = NLWebHandlerState.DONE
+            return
 
 class FullDecontextualizer(ContextUrlDecontextualizer):
     DECONTEXTUALIZE_QUERY_PROMPT = [

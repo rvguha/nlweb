@@ -1,6 +1,7 @@
 import json
 import os
 import mllm
+from azure_embedding import get_azure_embedding
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.indexes import SearchIndexClient    
@@ -16,7 +17,7 @@ from azure.search.documents.indexes.models import (
     HnswAlgorithmConfiguration,
     VectorSearchAlgorithmKind
 )
-
+import time
 from mllm import get_embedding
 
 SEARCH_SERVICE_ENDPOINT = "https://mahi-vector-search.search.windows.net"
@@ -49,7 +50,7 @@ def initialize_clients():
         search_client = SearchClient(endpoint=SEARCH_SERVICE_ENDPOINT, index_name=index_name, credential=credential)
         search_clients[index_name] = search_client
 
-def search_db(query, site, num_results=50):
+async def search_db(query, site, num_results=50):
     """
     Search the Azure AI Search index for records filtered by site and ranked by vector similarity
     
@@ -61,11 +62,20 @@ def search_db(query, site, num_results=50):
     Returns:
         list: List of search results with relevance scores
     """
-    embedding = mllm.get_embedding(query)
-    return retrieve_by_site_and_vector(site, embedding, num_results)
+    start_embed = time.time()
+  #  embedding = mllm.get_embedding(query)
+    embedding = await get_azure_embedding(query)
+    embed_time = time.time() - start_embed
+    
+    start_retrieve = time.time()
+    results = await retrieve_by_site_and_vector(site, embedding, num_results)
+    retrieve_time = time.time() - start_retrieve
+    
+    print(f"Timing - Embedding: {embed_time:.2f}s, Retrieval: {retrieve_time:.2f}s")
+    return results
     
 
-def retrieve_by_site_and_vector(site, vector_embedding, top_n=10):
+async def retrieve_by_site_and_vector(site, vector_embedding, top_n=10):
     """
     Retrieve top n records filtered by site and ranked by vector similarity
     
@@ -114,7 +124,7 @@ def retrieve_by_site_and_vector(site, vector_embedding, top_n=10):
     return processed_results
 
 
-def retrieve_item_with_url(url, top_n=1):
+async def retrieve_item_with_url(url, top_n=1):
     """
     Retrieve records by exact URL match
     
@@ -135,25 +145,16 @@ def retrieve_item_with_url(url, top_n=1):
     search_options = {
         "filter": f"url eq '{url}'",
         "top": top_n,
-        "select": "url,name,site,data"  # Specify the fields to return
+        "select": "url,name,site,schema_json"  # Specify the fields to return
     }
     
     # Execute the search
     results = search_client.search(search_text=None, **search_options)
-    
-    # Process results into a more convenient format
-    processed_results = []
     for result in results:
-        processed_result = {
-            "url": result["url"],
-            "name": result["name"],
-            "site": result["site"]
-        }
-        processed_results.append(processed_result)
-    
-    return processed_results
+        return [result["url"], result["schema_json"], result["name"], result["site"]]
+    return None
 
-def search_multiple_indices(query_embedding, top_n=10):
+async def search_all_sites(query, top_n=10):
     """
     Search across multiple indices based on embedding size
     
@@ -167,9 +168,8 @@ def search_multiple_indices(query_embedding, top_n=10):
     Returns:
         list: List of search results with relevance scores
     """
-    # Determine which index to use based on embedding size
+    query_embedding = await get_azure_embedding(query)
     embedding_size = len(query_embedding)
-    
     if embedding_size == 1536:
         index_name = "embeddings1536"
     elif embedding_size == 3072:
@@ -200,13 +200,7 @@ def search_multiple_indices(query_embedding, top_n=10):
     # Process results into a more convenient format
     processed_results = []
     for result in results:
-        processed_result = {
-            "url": result["url"],
-            "name": result["name"],
-            "site": result["site"],
-            "schema_json": result["schema_json"],
-            "score": result["@search.score"]
-        }
+        processed_result = [result["url"], result["schema_json"], result["name"], result["site"]]
         processed_results.append(processed_result)
         
     return processed_results

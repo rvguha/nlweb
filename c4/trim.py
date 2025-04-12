@@ -5,8 +5,17 @@ def listify (item):
         return [item]
     else:
         return item
+    
+def jsonify(obj):
+    if isinstance(obj, str):
+        try:
+            obj = json.loads(obj)
+        except json.JSONDecodeError:
+            return obj
+    return obj
 
 def trim_json(obj):
+    obj = jsonify(obj)
     objType = obj["@type"] if "@type" in obj else ["Thing"]
     if not isinstance(objType, list):
         objType = [objType]
@@ -19,6 +28,7 @@ def trim_json(obj):
     return obj
 
 def trim_json_hard(obj):
+    obj = jsonify(obj)
     objType = obj["@type"] if "@type" in obj else ["Thing"]
     if not isinstance(objType, list):
         objType = [objType]
@@ -27,10 +37,11 @@ def trim_json_hard(obj):
     if ("Recipe" in objType):
         return trim_recipe_hard(obj)
     if ("Movie" in objType or "TVSeries" in objType):
-        return trim_movie_hard(obj)
+        return trim_movie(obj, hard=True)
    
 
 def trim_recipe(obj):
+    obj = jsonify(obj)
     items = collateObjAttr(obj)
     js = {}
     skipAttrs = ["mainEntityOfPage", "publisher", "image", "datePublished", "dateModified", 
@@ -52,10 +63,14 @@ def trim_recipe_hard(obj):
         js[attr] = items[attr]
     return js
 
-def trim_movie(obj):
+
+
+def trim_movie(obj, hard=False):
     items = collateObjAttr(obj)
     js = {}
     skipAttrs = ["mainEntityOfPage", "publisher", "image", "datePublished", "dateModified", "author", "trailer"]
+    if (hard):
+        skipAttrs.extend(["actor", "director", "creator", "review"])
     for attr in items.keys():
         if (attr in skipAttrs):
             continue
